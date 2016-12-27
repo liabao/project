@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>商品收藏</title>
+		<link rel="shortcut icon" href="../Images/logo.png" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/conner.css" />
+	</head>
+	<body>
+		<section class="common-wrapper">
+			<div class="mui-content">
+				<div id="slider" class="mui-slider mui-fullscreen">
+					<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+						<div class="product-list mui-scroll">
+							<ul class="mui-table-view mui-table-view-chevron" id="list">
+								<li>
+									<a href="#">
+										<div class="list-items">
+											<div class="similar-product-img1">
+												<img src="../Images/images4.png">
+											</div>
+											<div class="similar-product-title">
+												<p class="p-title">韩国Innisfre悦诗风吟skinny韩国悦诗风吟skinny</p>
+												<p class="p-title1">
+													<span><em>155</em>积分+<em>88</em>元</span>
+													<span class="fr money">￥155</span>
+												</p>
+												<p class="p-title2">快乐的蚂蚱店铺</p>
+											</div>
+										</div>
+										<div class="similar-product-title1">
+											<p class="fr">
+												<span class="Purchase-btn">取消收藏</span>
+												<span class="Purchase-btn1">加入进货单</span>
+											</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="list-items">
+											<div class="similar-product-img1">
+												<img src="../Images/images4.png">
+											</div>
+											<div class="similar-product-title">
+												<p class="p-title">韩国Innisfre悦诗风吟skinny韩国悦诗风吟skinny</p>
+												<p class="p-title1">
+													<span><em>155</em>积分+<em>88</em>元</span>
+													<span class="fr money">￥155</span>
+												</p>
+												<p class="p-title2">快乐的蚂蚱店铺</p>
+											</div>
+										</div>
+										<div class="similar-product-title1">
+											<p class="fr">
+												<span class="Purchase-btn">取消收藏</span>
+												<span class="Purchase-btn1">加入进货单</span>
+											</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--空白页面-->
+			<div class="content" style="display:none ;">
+				<img src="../Images/images6.png" width="225px" height="103.5px">
+				<p>您暂无商品收藏</p>
+			</div>
+			<!--空白页面-->
+		</section>
+		<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				pullRefresh: {
+					container: "#refreshContainer", //待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+					up: {
+						auto: false,
+						callback: pullupRefresh
+					},
+					down: {
+						callback: pulldownRefresh
+					}
+				}
+
+			});
+			//上拉加载更多
+			function pullupRefresh() {
+				loaded();
+				//是否还有更多数据；若还有更多数据，则传入false; 否则传入true，之后滚动条滚动到底时，将不再显示“上拉显示更多”的提示语，而显示“没有更多数据了”的提示语；
+				mui('#refreshContainer').pullRefresh().endPullupToRefresh(false);
+			}
+			//下拉刷新
+			function pulldownRefresh() {
+
+				loaded();
+				//注意，加载完新数据后，必须执行如下代码，注意：若为ajax请求，则需将如下代码放置在处理完ajax响应数据之后
+				mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+			}
+
+			function loaded() {
+				//下拉刷新显示成功效果
+				$("#list").append('<li>' +
+					'<a href="#">' +
+					'<div class="list-items">' +
+					'<div class="similar-product-img1">' +
+					'<img src="../Images/images4.png">' +
+					'</div>' +
+					'<div class="similar-product-title">' +
+					'<p class="p-title">韩国Innisfre悦诗风吟skinny韩国悦诗风吟skinny</p>' +
+					'<p class="p-title1">' +
+					'<span><em>155</em>积分+<em>88</em>元</span>' +
+					'<span class="fr money">￥155</span>' +
+					'</p>' +
+					'<p class="p-title2">快乐的蚂蚱店铺</p>' +
+					'</div>' +
+					'</div>' +
+					'<div class="similar-product-title1">' +
+					'<p class="fr">' +
+					'<span class="Purchase-btn">取消收藏</span>' +
+					'<span class="Purchase-btn1">加入进货单</span>' +
+					'</p>' +
+					'</div>' +
+					'</a>' +
+					'</li>');
+			}
+		</script>
+
+	</body>
+
+</html>

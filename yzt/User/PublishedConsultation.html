@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>发表咨询</title>
+		<link rel="shortcut icon" href="../Images/logo.png" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/NPersonGroup.css" />
+	</head>
+	<body class="header-body">
+		<section class="common-wrapper">
+			<div class="published-center">
+				<p class="p-title16">
+					<span class="fl">发表咨询</span>
+					<span class="fr" onclick="window.location.href='Myadvice.html'"><img src="../Images/icon-shop1.png"><i>我的咨询</i></span>
+				</p>
+				<textarea rows="5" placeholder="请输入咨询内容（5~300字）" class="complaints-textarea"></textarea>
+				<a href="#" class="baseBtn" onclick="EjectDiv('row_col_6|row_col', 'black', 'row_col')">完成</a>
+			</div>
+		</section>
+		<!--弹出窗口网络开始-->
+		    <div class="black" id="row_col" onclick="HideDiv()"></div>
+		   	   <div class="network" id="row_col_6">
+		   	   	<div class="purchase-img">
+			   	   	 <p><img src="../Images/close1.png"></p>
+			   	   	 <p>咨询提交成功</p>			   	   	 
+		   	   	 </div>
+		   	   	 <span class="fr" onclick="closeDiv('row_col|row_col_6')">确定</span>
+		   	   </div>
+		<!--弹出窗口网络结束-->
+		<script type="text/javascript" src="../js/jquery-1.7.2.min.js" ></script>
+		<script type="text/javascript" src="../js/recharge.js" ></script>
+	</body>
+</html>

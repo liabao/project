@@ -1,0 +1,288 @@
+.common-wrapper {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    height: auto;
+    padding-bottom: 50px;
+     position: inherit;
+}
+.mbean,.recharge-content{width: 100%; height: auto; overflow: hidden; margin-top: 35px; font-family:"宋体";}
+.mbean p{text-align: center; font-size: 16px; color: #808080;}
+.mbean p img{width: 64.5px; height: 59px;}
+.mbean h1{text-align: center; font-size:28px; font-weight: 100;}
+.recharge-content{margin-top:28px ;}
+.recharge{width:88% ; height: 40px; line-height: 40px;
+text-align: center; margin:0 auto; background: #6dc7cf; display: block;
+border-radius: 4px; overflow: hidden; color: #fff; font-size: 18px;
+     box-shadow: 1px 4px 8px rgba(9, 193, 187, 0.2), 0px 0px 2px rgba(55, 201, 216, 0.61);
+}
+.recharge:hover{color: #fff;}
+.Withdrawal{margin-top:17px; height: 38px;display: block;width:88% ;text-align: center; margin:15px auto; 
+border-radius: 4px; overflow: hidden; color: #fff; font-size: 18px; line-height: 38px; border: 1px solid #6DC7CF; background: #FFF; color: #6DC7CF;}
+.Withdrawal:hover{color: #6DC7CF;}
+.Prompt{width:88%; margin:10px auto; color: #666;}
+.Prompt i{color: #d32a2a;}
+.detailed{height:40px; line-height:40px;font-family: "Adobe 黑体 Std R"; margin: 10px 10px 0px 0px; color: #8e8e8e;}
+.detailed i img{width: 15px; height:18.5px ; vertical-align: sub; margin-right:5px ; }
+/****充值*****/
+.mbean-content{width: 100%; height: auto; background: #6dc7cf;margin-top:0px ;padding-bottom: 10px;}
+.mbean-content p{text-align: center; font-size: 16px; color: #fff;margin-top:25px ;}
+.mbean-content h1{text-align: center; font-size:40px; font-weight: 100; color: #fff;}
+.amount{width: 100%; height: auto; background: #fff; padding-bottom:10px; overflow: hidden;}
+.Bankmoney { 
+    border-radius: 5px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    border: 1px solid #b7b7b7;
+    width:95%;
+    margin: 20px auto;
+}
+.Bankmoney input {
+    font-size:16px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-appearance: none;
+    outline: none;
+    color: #999;
+    width: 87%;font-family: "Adobe 黑体 Std R";
+    margin-left:10px ;
+}
+.Present-manner p{height: 40px; line-height: 40px; margin-left: 10px;font-family: "Adobe 黑体 Std R";  color: #999;}
+.Present-ul{width: 100%; height: auto; background: #fff;}
+.Present-ul li {height: 45px; line-height: 45px; border-bottom: 1px solid #dfdfdf;}
+.Present-ul li img{vertical-align: sub;margin-left:10px ;}
+.Present-ul li:nth-of-type(2){border-bottom: none;}
+.Present-ul li i{margin-left: 12px;font-family: "Adobe 黑体 Std R";}
+.Present-ul li i:nth-of-type(2){margin-right: 10px;}
+.page_title{font-family: "Adobe 黑体 Std R"; color: #999; display: none; height:30px ; line-height: 30px;}
+.page_title i{color: #d32a2a;font-family: "Adobe 黑体 Std R";}
+.Present-ul li .icon-name1{
+	display: inline-block;
+    width: 15px;
+    height: 16px;
+    background: url(../Images/checkedOff03.png) no-repeat;
+    background-size: 100%;
+    vertical-align: sub;margin-top: 15px;
+}
+.Present-ul li .icon-name1.cur {
+    background:url(../Images/checkedOn03.png) no-repeat;
+    background-size: 100%;
+}
+.Detailed-content{width: 100%; height: auto; overflow: hidden;}
+.Detailed-content li{height:70px ; border-bottom: 1px solid #DFDFDF;}
+.Detailed-content li p{overflow: hidden;margin-top: 15px;font-family: "Adobe 黑体 Std R";}
+.Detailed-content li p span{margin-left: 10px;font-size: 14px;}
+.number-right,.number-right2{margin-right: 10px; color: #6dc7cf;font-size:16px ;}
+.number-right1{margin-right: 10px; color: #333;font-size:14px ;}
+.Date{color: #8e8e8e;}
+.number-right2{color: #d32a2a;}
+.pullUpLabel{font-family: "Adobe 黑体 Std R";}
+.common-content{width: 100%; height: auto; overflow: hidden;}
+.common-content li{height: 44px; line-height: 44px; border-bottom: 1px solid #DFDFDF;font-family: "Adobe 黑体 Std R"; }
+.common-content li p span{margin-left: 10px; color: #8e8e8e; font-size: 16px;}
+.common-content li p span:nth-of-type(2){color: #333;margin-right:10px ;}
+.s8{width:50%; float:left;   
+ overflow: hidden;
+    word-break: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;}
+/*******新建地址******/
+.mui-input-group .mui-input-row{height: 44px; line-height: 44px;}
+.mui-input-group:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  /*  height: 1px;*/
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background:none;
+}
+.mui-input-group .mui-input-row:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0px;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+
+}
+.mui-input-row label {
+    font-family: "Adobe 黑体 Std R";
+    line-height: 1.1;
+    float: left;
+    width: 35%;
+    padding: 15px 15px;
+    color: #565656;
+}
+.mui-input-row label~input, .mui-input-row label~select {
+    float: right;
+    width: 65%;
+    margin-bottom: 0;
+    padding-left: 0;
+    border: 0;
+    height: 44px;
+    line-height:30px;
+}
+.address-foot{width: 100%; height: auto; overflow: hidden;margin-top:15px ;}
+.address-foot i{width: 19px;height: 19px; background:url(../Images/checkedOff02.png) no-repeat ;
+background-size:100% ; display: block; float: left;margin-left:10px ;}
+.address-foot i.cur{ background:url(../Images/checkedOn02.png) no-repeat ;
+background-size:100% ; }
+.submit {
+    background: #6dc7cf;
+    color: #fff;
+    font-size: 18px;
+    width:95%;
+    height: 40px;
+    line-height:40px;
+    border-radius: 4px;
+    outline: none;
+    position: fixed;
+    bottom: 20px;
+    left:0px;
+    text-align: center;
+   font-family: "Adobe 黑体 Std R";
+   margin: 0 auto;
+   display: block;
+   margin-left:10px ;
+   box-shadow: 1px 4px 8px rgba(9, 193, 187, 0.2), 0px 0px 2px rgba(55, 201, 216, 0.61);
+}
+.submit:hover{color: #fff;}
+/***地址管理****/
+
+.addressBox {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin-top: 50px;
+   font-family: "Adobe 黑体 Std R";
+}
+
+.addressBox img {
+	width: 255px;
+	height: 141.5px;
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+}
+
+.addressBox p {
+	text-align: center;
+	font-size: 18px;
+	color: #5d5d5d;
+}
+
+.bottomAdd {
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #6dc7cf;
+	border-radius: 5px;
+	border: 2px solid #6dc7cf;
+	display: block;
+	margin: 20px auto;
+}
+
+.bottomAdd:hover {
+	color: #6dc7cf;
+}
+
+.addressBoxout {
+	overflow: hidden;
+	width: 100%;
+	 font-family: "Adobe 黑体 Std R";
+}
+
+.addressList {
+	width: 100%;
+	margin-top: 10px;
+	background: #fff;
+}
+.new-p-re,.addressTxt,.setting{padding: 10px 10px;}
+.tel {
+	margin-left: 20px;
+}
+
+.addressList span {
+	font-size: 18px; font-family: "Adobe 黑体 Std R";
+}
+
+.addressTxt {
+	color: #333;
+	margin: 0;
+	border-bottom: 1px solid #eeeeee;
+	padding-bottom: 8px; font-family: "Adobe 黑体 Std R";
+	margin-top:-15px ;
+}
+
+.setting {
+	padding-top: 10px;
+	overflow: hidden;
+}
+
+.setting .default {
+	float: left;
+}
+
+.setting .operate {
+	float: right;
+}
+
+.setting .operate span {
+	margin-right: 24px;
+	font-size: 16px;
+	color: #8e8e8e; font-family: "Adobe 黑体 Std R";
+}
+
+.setting .operate span a {
+	color: #8E8E8E;
+	 font-family: "Adobe 黑体 Std R";
+}
+
+.setting .operate .modify,
+.setting .operate .remove {
+	background: url(../images/modify.png)no-repeat;
+	background-size: 100%;
+	width: 15px;
+	height: 18px;
+	display: inline-block;
+	position: relative;
+	top: 2px;
+	right: 4px;
+}
+
+.setting .operate span:last-child {
+	margin-right: 0;
+}
+
+.setting .operate .remove {
+	background: url(../images/remove.png) no-repeat;
+	background-size: 100%;
+	width: 13px;
+}
+
+.setting .default i {
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	background: url(../images/checkedOff02.png) no-repeat;
+	background-size: 100%;
+	vertical-align: sub;
+}
+
+.setting .default i.cur {
+	background: url(../images/checkedOn02.png) no-repeat;
+	background-size: 100%;
+}
+
+.curtert {
+	color: #8E8E8E;
+}
+.baseBtn1 {
+	margin-top: 23px;
+}

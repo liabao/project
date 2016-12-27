@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>耗材拼购</title>
+		<link rel="shortcut icon" href="Images/logo.png" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<style>
+			.mui-content {background: #FFF;}
+			.mui-table-view {margin-top: -20px;}
+		</style>
+	</head>
+	<body class="header-body">
+		<section class="common-wrapper">
+			<div class="mui-content">
+				<div id="slider" class="mui-slider mui-fullscreen">
+					<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+						<div class="floor warp-hot mui-scroll">
+							<ul class="mui-table-view mui-table-view-chevron showList showList-pl" id="list">
+								<li>
+									<a href="user/Detail.html" data-a="a">
+										<div class="similar-product1">
+											<div class="product1-img"><img src="Images/images3.png"></div>
+											<div class="product2-img"><img src="Images/9614383.jpg"></div>
+										</div>
+										<div class="similar-product-text2">
+											<p class="p3">商品标题商品标题商品标题商品标题商品标题商</p>
+											<p class="number">489</p>
+											<p class="p4">
+												<span class="s4 fl">拼购量</span>
+												<span class="graphbox">	
+		   	  		  			         <span style="width: 30%;"></span>
+												</span>
+												<span class="s5">1000</span>
+											</p>
+											<p class="p5">
+												<span class="s4 money fl">￥68</span>
+												<span class="Surplus">剩余10天</span>
+												<span class="fr car-btn" onclick="window.location.href='Settlement.html'">
+												参加拼购
+											</span>
+											</p>
+										</div>
+									</a>
+								</li>
+															<li>
+									<a href="user/Detail.html" data-a="a">
+										<div class="similar-product1">
+											<div class="product1-img"><img src="Images/images3.png"></div>
+											<div class="product2-img"><img src="Images/9614383.jpg"></div>
+										</div>
+										<div class="similar-product-text2">
+											<p class="p3">商品标题商品标题商品标题商品标题商品标题商</p>
+											<p class="number">489</p>
+											<p class="p4">
+												<span class="s4 fl">拼购量</span>
+												<span class="graphbox">	
+		   	  		  			         <span style="width: 30%;"></span>
+												</span>
+												<span class="s5">1000</span>
+											</p>
+											<p class="p5">
+												<span class="s4 money fl">￥68</span>
+												<span class="Surplus">剩余10天</span>
+												<span class="fr car-btn" onclick="window.location.href='Settlement.html'">
+												参加拼购
+											</span>
+											</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+
+		<script type="text/javascript">
+			mui.init({
+				pullRefresh: {
+					container: "#refreshContainer", //待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+					up: {
+						auto: false,
+						callback: pullupRefresh
+					},
+					down: {
+						callback: pulldownRefresh
+					}
+				}
+
+			});
+			//点击
+			mui("#refreshContainer").on('tap', '.car-btn', function() {
+				mui.openWindow({
+					url: 'user/settlement.html'
+				});
+			})
+			mui("#refreshContainer").on('tap', '[data-a="a"]', function() {
+					mui.openWindow({
+						url: 'user/Detail.html'
+					});
+				})
+				//上拉加载更多
+			function pullupRefresh() {
+				loaded();
+				//是否还有更多数据；若还有更多数据，则传入false; 否则传入true，之后滚动条滚动到底时，将不再显示“上拉显示更多”的提示语，而显示“没有更多数据了”的提示语；
+				mui('#refreshContainer').pullRefresh().endPullupToRefresh(false);
+			}
+			//下拉刷新
+			function pulldownRefresh() {
+
+				loaded();
+				//注意，加载完新数据后，必须执行如下代码，注意：若为ajax请求，则需将如下代码放置在处理完ajax响应数据之后
+				mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+			}
+
+			function loaded() {
+				//下拉刷新显示成功效果
+				$("#list").append('<li>' +
+					'<a href="#">' +
+					'<div class="similar-product1">'+					    				
+			   	  		'<div class="product1-img"><img src="Images/images3.png"></div>'+
+			   	  		'<div class="product2-img"><img src="Images/banner-images3.png"></div>'+
+		   	  		  '</div>' +
+					'<div class="similar-product-text2">' +
+					'<p class="p3">商品标题商品标题商品标题商品标题商品标题商</p>' +
+					'<p class="number">489</p>' +
+					'<p class="p4">' +
+					'<span class="s4 fl">拼购量</span>' +
+					'<span class="graphbox">' +
+					'<span style="width: 50%;"></span>' +
+					'</span>' +
+					'<span class="s5">咨询中</span>' +
+					'</p>' +
+					'<p class="p5">' +
+					'<span class="s4 money fl">￥68</span>' +
+					'<span class="Surplus">剩余10天</span>' +
+					'<span class="fr car-btn">参加拼购</span>' +
+					'</p>' +
+					'</div>' +
+					'</a>' +
+					'</li>');
+			}
+		</script>
+
+	</body>
+
+</html>

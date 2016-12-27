@@ -1,0 +1,147 @@
+.common-wrapper {
+	width: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+	height: auto;
+}
+.header-body{background: #fff;}
+.header {
+	height: 117px;
+	background: #fff;
+	overflow: hidden;
+	position: relative;
+}
+
+.header .my-info {
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+.header .my-info img {
+	width: 69px;
+	height: 55px;
+	margin: 1.07rem 0rem 0rem 2rem;
+}
+
+.header .my-person-info {
+	vertical-align: middle;
+	position: relative;
+	display: inline-block;
+	margin: 1.07rem 0rem 0rem 1.07rem;
+}
+
+.header .my-person-info p {
+	line-height: 1.93rem;
+	font-size: 1.07rem;
+	color: #5d5d5d;
+	font-family: "宋体";
+     width: 185px;
+    overflow: hidden;
+    word-break: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+	
+}
+
+.header .my-person-info .font-black {
+	color: #333;
+}
+
+.blue {
+	color: #6DC7CF;
+}
+.panel-package{width: 100%; height: auto;background: #F4F4F4;padding-bottom:30px;}
+.package-title {
+	border-bottom: 1px solid #d7d7d7;
+	padding: 14px 0 14px 12px;
+	position: relative;
+}
+
+.package-title span {
+	font-family: "宋体";
+	font-size: 16px;
+}
+
+.package-title span:nth-last-of-type(1) {
+	margin-left: 15px;
+}
+
+.track-list {
+	margin: 12px;
+	padding-left: 5px;
+	position: relative;
+}
+
+.track-list li {
+	position: relative;
+	padding: 22px 0 0 25px;
+	line-height: 18px;
+	border-left: 2px solid #4ab78d;
+	color: #333;
+	font-family:"宋体";
+}
+
+.track-list li.first .txt {
+	color: #6DC7CF;
+}
+
+.track-list li .node-icon {
+	position: absolute;
+	left: -6px;
+	top: 25px;
+	width: 9px;
+	height: 9px;
+	background: #4ab78d;
+	border-radius: 50%;
+}
+
+.track-list li .time {
+	float: left;
+}
+
+.track-list li .txt {
+	overflow: hidden;
+	padding-left: 10px;
+}
+
+.message {
+	background: #fff;
+	border-radius: 4px;
+	box-sizing: border-box;
+	position: relative;
+	padding: 10px;
+}
+
+.message:before {
+	content: "";
+	width: 10px;
+	height: 10px;
+	background: url(../images/sanjiao.jpg) no-repeat;
+	background-size: 100%;
+	position: absolute;
+	top: 15px;
+	left: -10px;
+}
+
+.logistics-date {
+	position: absolute;
+	bottom: -13px;
+	left: -14px;
+	z-index: 10;
+	background: #f3f3f3;
+}
+
+/*.track-list li:last-child {
+	height: 12px;
+}*/
+
+.track-list li:first-child:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -4px;
+	width: 10px;
+	height: 30px;
+	background: #f3f3f3;
+}

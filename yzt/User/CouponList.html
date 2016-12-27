@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>我的红包</title>
+		<link rel="shortcut icon" href="../Images/logo.png" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/conner.css" />
+	</head>
+	<body>
+		<section class="common-wrapper">
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+					<div class="Coupon-comtent mui-scroll">
+						<ul class="mui-table-view mui-table-view-chevron" id="list">
+							<li>
+								<div class="Coupon-pl">
+									<p class="Name">汉斯SPA会所</p>
+									<p class="time">2015.06.08</p>
+									<p class="money">￥10</p>
+									<p class="title">已存入账号</p>
+									<div class="coupon">
+										<p>直发直抢红包</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="Coupon-pl">
+									<p class="Name">汉斯SPA会所</p>
+									<p class="time">2015.06.08</p>
+									<p class="money">￥10</p>
+									<p class="title">已存入账号</p>
+									<div class="coupon">
+										<p>裂变红包</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="content" style="display:none ;">
+				<img src="../Images/images7.png" width="190px" height="115.5px">
+				<p>您暂无红包</p>
+			</div>
+		</section>
+		<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				pullRefresh: {
+					container: "#refreshContainer", //待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+					up: {
+						auto: false,
+						callback: pullupRefresh
+					},
+					down: {
+						callback: pulldownRefresh
+					}
+				}
+
+			});
+			//上拉加载更多
+			function pullupRefresh() {
+				loaded();
+				//是否还有更多数据；若还有更多数据，则传入false; 否则传入true，之后滚动条滚动到底时，将不再显示“上拉显示更多”的提示语，而显示“没有更多数据了”的提示语；
+				mui('#refreshContainer').pullRefresh().endPullupToRefresh(false);
+			}
+			//下拉刷新
+			function pulldownRefresh() {
+
+				loaded();
+				//注意，加载完新数据后，必须执行如下代码，注意：若为ajax请求，则需将如下代码放置在处理完ajax响应数据之后
+				mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+			}
+			function loaded() {
+				//下拉刷新显示成功效果
+				$("#list").append('<li>' +
+					'<div class="Coupon-pl">' +
+					'<p class="Name">汉斯SPA会所</p>' +
+					'<p class="time">2015.06.08</p>' +
+					'<p class="money">￥10</p>' +
+					'<p class="title">已存入账号</p>' +
+					'<div class="coupon">' +
+					'<p>裂变红包</p>' +
+					'</div>' +
+					'</div>' +
+					'</li>');
+			}
+		</script>
+	</body>
+
+</html>

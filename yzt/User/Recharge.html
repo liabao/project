@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>充值</title>
+		<link rel="shortcut icon" href="../Images/logo.png" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/Amount.css" />
+		<link rel="stylesheet" href="../css/withdraselec.css" />
+	</head>
+	<body>
+		<section class="common-wrapper">
+			<div class="mbean mbean-content">
+				<p>当前余额（元）</p>
+				<h1>￥10.55</h1>
+			</div>
+		    <div class="mbean-center">
+                <form action="" class="amount">
+                	<div class="Bankmoney">
+            			<input type="text" value="" placeholder="请输入充值金额" id="express"name="order-count-input">
+            			<p class="page_title">充值后余额为：<i>100.05元</i></p>
+            		</div>
+                </form>
+                <div class="Present-manner">
+                	<p>请选择充值方式</p>
+                	<ul class="Present-ul">
+                		<li onclick="EjectDiv('row_col_3|row_col', 'black', 'row_col')">
+                			<a href="#">
+                			<img src="../Images/28-icon-PCenter-gray.png" width="23px" height="21px"><i>微信充值</i>
+                			<i class="fr"><img src="../Images/icon-right1.png"width="6px" height="10px"></i>
+                			</a>
+                		</li>
+                		<li onclick="EjectDiv('row_col_3|row_col', 'black', 'row_col')">
+                			<a href="#">
+                			<img src="../Images/29-icon-PCenter-gray.png" width="23px"height="23px"><i>支付宝充值</i>
+                			<i class="fr"><img src="../Images/icon-right1.png"width="6px" height="10px"></i>
+                			</a>
+                		</li>
+                	</ul>
+                </div>
+		    </div>
+		</section>
+		<!--提现开始-->
+		<div class="black" id="row_col" onclick="HideDiv()"></div>
+		  <div class="bab_opt_content"  id="row_col_3">
+		  	 <span class="close" onclick="closeDiv('row_col|row_col_3')"><img src="../Images/close.png" width="13px" height="13px"></span>
+		  	  <div class="bab_content">
+			  	   <p>提现</p>
+			  	   <p>￥500.00</p>
+			  	   <p class="bab_money">提款后余额￥1030.25</p>
+		          <form action="" method="get">
+		          	<div class="bab-pl">
+		          		<div class="bab-name">银行</div>
+		          		<div class="select-out">
+			          	<select class="ui-select">
+							<option value="0">中国工商银行</option>
+							<option value="1">中国农业很行</option>
+							<option value="2">中国建设银行</option>
+							<option value="3">中国建设银行</option>
+							<option value="4">中国银行</option>
+							<option value="5">中国招商银行</option>
+							<option value="6">交通银行</option>
+							<option value="7">交通银行</option>
+							<option value="8">交通银行</option>
+							<option value="9">交通银行</option>
+							<option value="10">交通银行</option>
+							<option value="11">交通银行</option>
+							<option value="12">交通银行</option>
+							<option value="13">交通银行</option>
+							<option value="14">交通银行</option>
+							<option value="15">交通银行</option>
+							<option value="16">交通银行</option>
+							<option value="17">交通银行</option>
+							<option value="18">交通银行</option>
+							<option value="19">交通银行</option>
+							<option value="20">交通银行</option>
+						</select>
+                        </div>
+			          	 <div class="bab-name">开户行</div>
+			          	 <input type="text" class="bab-input" />
+			          	 <div class="bab-name">开户帐号</div>
+			          	 <input type="text" class="bab-input" />
+			              <div class="bab-name">开户姓名</div>
+			          	 <input type="text" class="bab-input" />
+			          	 <a href="#" class="bab-btn" onclick="EjectDiv('row_col_5|row_col', 'black|row_col_3', 'row_col')">下一步</a>
+			        </div>
+		          </form>
+		  	   </div> 
+		  </div>
+		<!--提现结束-->
+		<!--支付宝开始-->
+		  <div class="Withdrawals_content"  id="row_col_4">
+		  	 <span class="close" onclick="closeDiv('row_col|row_col_4')"><img src="../Images/close.png" width="13px" height="13px"></span>
+		  	  <div class="bab_content">
+			  	   <p>提现</p>
+			  	   <p>￥500.00</p>
+			  	   <p class="bab_money">提款后余额￥1030.25</p>
+		          <form>
+		          	<div class="bab-pl">
+			          	 <div class="bab-name">支付宝帐号</div>
+			          	 <input type="text" class="bab-input" />
+			              <div class="bab-name">实名认证姓名</div>
+			          	 <input type="text" class="bab-input" />
+			          	 <a href="#" class="bab-btn" onclick="EjectDiv('row_col_5|row_col', 'black|row_col_4', 'row_col')">下一步</a>
+			        </div>
+		          </form>
+		  	   </div> 
+		  </div>
+		<!--支付宝结束-->
+		<!--支付密码-->
+		    <div class="Payment-password"id="row_col_5" style="height:250px ;">
+		    	 <span class="close" onclick="closeDiv('row_col|row_col_5')"><img src="../Images/close.png" width="13px" height="13px"></span>
+		    	  <p>请输入支付密码</p>
+		    	  <p><input type="password" placeholder="请输入支付密码"/></p>
+		    	  <div class="Forget-password">忘记支付密码？</div>
+		    	  <a href="PresentParticulars.html" class="bab-btn bab-btn1" onclick="closeDiv('row_col|row_col_5')">确定</a>
+		    </div>
+		 <!--支付密码-->
+		<script type="text/javascript" src="../js/jquery-1.10.2.min.js" ></script>
+		<script type="text/javascript" src="../js/recharge.js" ></script>
+		<script type="text/javascript" src="../js/select.js" ></script>
+		<script>
+			$(function() {
+			$('select').comboSelect();
+		});
+    </script>
+	</body>
+
+</html>

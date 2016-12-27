@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>今日推荐</title>
+		<link rel="shortcut icon" href="Images/logo.png" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<style type="text/css">
+			.mui-scroll-wrapper {
+				bottom: 30px;
+			}
+			
+			.mui-scroll-wrappers {
+				top: 30px;
+			}
+			
+			.wrap-content {
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mui-content">
+			<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				<div class="mui-scroll mui-nav">
+					<a class="mui-control-item mui-active">
+						美容院耗材
+					</a>
+					<a class="mui-control-item">
+						美甲店耗材
+					</a>
+					<a class="mui-control-item">
+						美甲店耗材
+					</a>
+					<a class="mui-control-item">
+						美甲店耗材
+					</a>
+					<a class="mui-control-item">
+						美甲店耗材
+					</a>
+					<a class="mui-control-item">
+						美甲店耗材
+					</a>
+				</div>
+			</div>
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="refreshContainer" class="mui-content mui-scroll-wrapper mui-scroll-wrappers ">
+					<div class="warp-hot wrap-content mui-scroll">
+						<ul class="warp-list warp-listpl mui-table-view mui-table-view-chevron" id="list">
+							<li>
+								<div class="similar-product">
+			                        <div class="product-img">
+		   	  				            <a href="#"><img src="Images/9af5f5d.jpg"></a>
+		   	  				          </div>
+									<div class="similar-product-text3">
+										<p>平台精品推荐</p>
+										<p></p>
+										<p>商品卖点商品卖点商品卖点商品卖点</p>
+									</div>
+									<div class="similar-product-text">
+										<p class="similar-product-title4">
+											<a href="#">商品标题商品标题商品标题商品标题商</a>
+										</p>
+										<p class="s8">￥100</p>
+										<p class="similar-product-text7">
+											<del>￥100</del>
+											<span class="fr">剩余120件</span>
+										</p>
+									</div>
+									<div class="similar-product-bg">
+										<p class="num-title-bg">
+											<span class="minus-btn1" onclick="min(this)">-</span>
+											<input name="order-count-input" class="order-count-input1" type="tel" value="1">
+											<span class="plus-btn1" onclick="add(this)">+</span>
+										</p>
+										<span class="fr car-btn2" onclick="EjectDiv('row_col_1|row_col', 'black', 'row_col')">加入采购单</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="similar-product">
+                                     <div class="product-img">
+		   	  				            <a href="#"><img src="Images/430dc1f.gif"></a>
+		   	  				          </div>
+									<div class="similar-product-text3">
+										<p>平台精品推荐</p>
+										<p></p>
+										<p>商品卖点商品卖点商品卖点商品卖点</p>
+									</div>
+									<div class="similar-product-text">
+										<p class="similar-product-title4">
+											<a href="#">商品标题商品标题商品标题商品标题商</a>
+										</p>
+										<p class="s8">￥100</p>
+										<p class="similar-product-text7">
+											<del>￥100</del>
+											<span class="fr">剩余120件</span>
+										</p>
+									</div>
+									<div class="similar-product-bg">
+										<p class="num-title-bg">
+											<span class="minus-btn1" onclick="min(this)">-</span>
+											<input name="order-count-input" class="order-count-input1" type="tel" value="1">
+											<span class="plus-btn1" onclick="add(this)">+</span>
+										</p>
+										<span class="fr car-btn2" onclick="EjectDiv('row_col_1|row_col', 'black', 'row_col')">加入采购单</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="similar-product">
+                                     <div class="product-img">
+		   	  				            <a href="#"><img src="Images/430dc1f.gif"></a>
+		   	  				          </div>
+									<div class="similar-product-text3">
+										<p>平台精品推荐</p>
+										<p></p>
+										<p>商品卖点商品卖点商品卖点商品卖点</p>
+									</div>
+									<div class="similar-product-text">
+										<p class="similar-product-title4">
+											<a href="#">商品标题商品标题商品标题商品标题商</a>
+										</p>
+										<p class="s8">￥100</p>
+										<p class="similar-product-text7">
+											<del>￥100</del>
+											<span class="fr">剩余120件</span>
+										</p>
+									</div>
+									<div class="similar-product-bg">
+										<p class="num-title-bg">
+											<span class="minus-btn1" onclick="min(this)">-</span>
+											<input name="order-count-input" class="order-count-input1" type="tel" value="1">
+											<span class="plus-btn1" onclick="add(this)">+</span>
+										</p>
+										<span class="fr car-btn2" onclick="EjectDiv('row_col_1|row_col', 'black', 'row_col')">加入采购单</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="similar-product">
+                                     <div class="product-img">
+		   	  				            <a href="#"><img src="Images/430dc1f.gif"></a>
+		   	  				          </div>
+									<div class="similar-product-text3">
+										<p>平台精品推荐</p>
+										<p></p>
+										<p>商品卖点商品卖点商品卖点商品卖点</p>
+									</div>
+									<div class="similar-product-text">
+										<p class="similar-product-title4">
+											<a href="#">商品标题商品标题商品标题商品标题商</a>
+										</p>
+										<p class="s8">￥100</p>
+										<p class="similar-product-text7">
+											<del>￥100</del>
+											<span class="fr">剩余120件</span>
+										</p>
+									</div>
+									<div class="similar-product-bg">
+										<p class="num-title-bg">
+											<span class="minus-btn1" onclick="min(this)">-</span>
+											<input name="order-count-input" class="order-count-input1" type="tel" value="1">
+											<span class="plus-btn1" onclick="add(this)">+</span>
+										</p>
+										<span class="fr car-btn2" onclick="EjectDiv('row_col_1|row_col', 'black', 'row_col')">加入采购单</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--底部导航开始-->
+		<footer>
+			<div class="b_foot">
+				<div class="b_f_left active" onclick="window.location.href='TodayIndex.html'">
+					<div class="b_f_img" id="activitdataTypeImg5">
+					</div>
+					<span class="b_f_text_02">今日推荐</span>
+				</div>
+				<div class="b_f_left" onclick="window.location.href='FlashSale.html'">
+					<div class="b_f_img" id="dataTypeImg6">
+					</div>
+					<span class="b_f_text_02 ">限时抢购</span>
+				</div>
+				<div class="b_f_left" onclick="window.location.href='Promotion.html'">
+					<div class="b_f_img" id="dataTypeImg7">
+					</div>
+					<span class="b_f_text_02">促销耗材</span>
+				</div>
+				<div class="b_f_left" onclick="window.location.href='javascript:;'">
+					<div class="b_f_img" id="dataTypeImg8">
+					</div>
+					<span class="b_f_text_02">品牌耗材</span>
+				</div>
+			</div>
+		</footer>
+		<!--底部导航结束-->
+		<!--今日推荐规格开始-->
+		<div class="black" id="row_col" onclick="HideDiv()"></div>
+		<div class="fgflyBox" id="row_col_1">
+			<span class="close" onclick="closeDiv('row_col|row_col_1')"><img src="images/close.png" width="13px" height="13px"></span>
+			<div class="fgScroll">
+				<div class="similar-product-img">
+					<a href="#" class="sim-img"><img src="Images/images4.png"></a>
+				</div>
+				<div class="similar-product-title9">
+					<p class="p10">韩国Innisfree悦诗风吟skinny韩国悦诗风吟</p>
+					<p class="p11">
+						<span class="price"><em>￥</em>120.00</span>
+					</p>
+				</div>
+			</div>
+			<div class="g_attr">
+				<p>规格：</p>
+				<ul>
+					<li class="cur">
+						<a href="#">规格参数</a>
+					</li>
+					<li>
+						<a href="#">规格参数</a>
+					</li>
+					<li>
+						<a href="#">规格参数</a>
+					</li>
+				</ul>
+			</div>
+			<div class="similar-product-title10">
+				<p>型号：</p>
+				<ul>
+					<li class="cur">
+						<a href="#">规格参数</a>
+					</li>
+					<li>
+						<a href="#">规格参数</a>
+					</li>
+					<li>
+						<a href="#">规格参数</a>
+					</li>
+				</ul>
+			</div>
+			<div class="similar-product-title10">
+				<p>采购数量：</p>
+				<p class="num-title num-title1">
+					<span class="btn minus-btn" onclick="min(this)">-</span>
+					<input name="order-count-input" class="order-count-input" type="tel" value="1">
+					<span class="btn plus-btn" onclick="add(this)">+</span>
+				</p>
+			</div>
+			<div class="similar-btn">
+				<span class="fl car-btn3"><img src="Images/like.png"><i>收藏</i></span>
+				<span class="fr car-btn4" onclick="closeDiv('row_col|row_col_1')">加入采购单</span>
+			</div>
+		</div>
+		<!--今日推荐规格结束-->
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/recharge.js"></script>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				pullRefresh: {
+					container: "#refreshContainer", //待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+					up: {
+						auto: false,
+						callback: pullupRefresh
+					},
+					down: {
+						callback: pulldownRefresh
+					}
+				}
+
+			});
+			//点击
+			mui("#refreshContainer").on('tap', '.minus-btn1', function() {
+				min(this);
+			})
+			mui("#refreshContainer").on('tap', '.plus-btn1', function() {
+				add(this);
+			})
+			mui("#refreshContainer").on('tap', '.car-btn2', function() {
+					url="#"
+					})
+			//上拉加载更多
+			function pullupRefresh() {
+				loaded();
+				//是否还有更多数据；若还有更多数据，则传入false; 否则传入true，之后滚动条滚动到底时，将不再显示“上拉显示更多”的提示语，而显示“没有更多数据了”的提示语；
+				mui('#refreshContainer').pullRefresh().endPullupToRefresh(false);
+			}
+			//下拉刷新
+			function pulldownRefresh() {
+
+				loaded();
+				//注意，加载完新数据后，必须执行如下代码，注意：若为ajax请求，则需将如下代码放置在处理完ajax响应数据之后
+				mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+			}
+
+			function loaded() {
+				//下拉刷新显示成功效果
+				$("#list").append('<li>' +
+					'<a href="#">' +
+					'<div class="similar-product">' +
+					'<img src="Images/images2.png">' +
+					'<div class="similar-product-text3">' +
+					'<p>平台精品推荐</p>' +
+					'<p></p>' +
+					'<p>商品卖点商品卖点商品卖点商品卖点</p>' +
+					'</div>' +
+					'<div class="similar-product-text">' +
+					'<p class="similar-product-title4">商品标题商品标题商品标题商品标题商</p>' +
+					'<p class="s8">￥100</p>' +
+					'<p class="similar-product-text7">' +
+					'<del>￥100</del>' +
+					'<span class="fr">剩余120件</span>' +
+					'</p>' +
+					'</div>' +
+					'<div class="similar-product-bg">' +
+					'<p class="num-title-bg">' +
+					'<span class="minus-btn1" onclick="min(this)">-</span>' +
+					'<input name="order-count-input" class="order-count-input1" type="tel" value="1">' +
+					'<span class="plus-btn1" onclick="add(this)">+</span>' +
+					'</p>' +
+					'<span class="fr car-btn2">加入采购单</span>' +
+					'</div>' +
+					'</div>' +
+					'</a>' +
+					'</li>');
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,131 @@
+.common-wrapper{width: 100%; height: auto; overflow: hidden;}
+.header-body{background: #fff;}
+.feedback{width: 96%; height: auto; margin: 0 auto; font-family: "宋体";}
+.feedback-title{height: 43px; line-height: 43px; border-bottom: 1px solid #eaeaea; font-size: 16px;}
+.Complaint{width: 100%; height: 60px; line-height: 60px; overflow: hidden;}
+.Complaint li{float: left;width: 33.3%; font-size: 18px; text-align: center;}
+.Complaint li.cur i{width:15px ; height: 15px; background: url(../images/checkedOn03.png) no-repeat;
+     display: inline-block; background-size:100% ; 
+}
+.Complaint li i{width:15px ; height: 15px; background: url(../images/checkedOff03.png) no-repeat;
+     display: inline-block; background-size:100% ; 
+}
+.complaints-textarea{width:96%; height: auto; overflow: hidden; border: 1px solid #b7b7b7;
+padding-left: 10px; font-size: 16px;    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-appearance: none; line-height: 30px;
+}
+
+.baseBtn {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #6DC7CF;
+    border-radius: 5px;
+    display: block;
+    margin:20px auto;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;font-family: "宋体";
+    box-shadow: 1px 4px 8px rgba(9, 193, 187, 0.2), 0px 0px 2px rgba(55, 201, 216, 0.61);
+}
+.baseBtn:hover{color: #fff;}
+#warp{margin-top: 20px;}
+.warp-img {
+    margin-left: 8px;
+    position: absolute;
+    margin-top:9px;
+    height:80px;
+    opacity: 0;
+}
+#warp{width:100% ; height: auto; overflow: hidden;}
+#warp li{float:left;margin-right:10px ;}
+.complaints ul li img{width:90px; height: 90px;}
+.black {
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	/*支持rgba的浏览器*/
+	filter: alpha(opacity=70);
+	z-index: 999999;
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000);
+	/*IE8支持*/
+	-ms-filter: ”progid: DXImageTransform.Microsoft.alpha(opacity=50);
+}
+
+.network {
+	width: 90%;
+	height: 150px;
+	background: #fff;
+	position: fixed;
+	top: 32%;
+	left: 5%;
+	z-index: 99999999;
+	display: none;
+	border-radius: 4px;
+}
+.network p {
+	font-size: 16px;
+	 margin: 10px 0px 0px 0px;
+	font-family: "宋体";
+}
+
+.purchase {
+	text-align: center;
+	padding-top: 25px;
+	font-family: "宋体";
+}
+
+.close1 {
+	font-size: 16px;
+	font-family: "宋体";
+	color: #67b1d6;
+	margin: 7px 10px 0px 0px;
+}
+.network p img {
+    width: 49.5px;
+    height: 49.5px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+.feedback-out{width: 100%; height: auto; overflow: hidden;padding-bottom:60px;}
+.feedback-out li{background: #fff; height:auto; padding-bottom: 10px;margin-top: 10px;
+ 
+}
+.feedback-out li:nth-of-type(1){margin-top: 0px;}
+.Complaint-pl{width:96%; height: auto; overflow: hidden; margin: 0 auto;font-family: "宋体"; }
+.Complaint-pl .Complaint-left{width:40px ; height:25px; 
+background: #ff7683; text-align: center; border-radius: 4px;
+color: #fff; font-family: "宋体"; line-height: 25px;margin-top: 45px;
+}
+.Complaint-pl .Complaint-brue{background: #60d48e;}
+.Complaint-pl .Complaint-violet{background: #76baff;}
+.Complaint-pl .swiper-slide{width:85%; height: auto; overflow:hidden;}
+.Complaint-time{float: left;color: #999; overflow: hidden;}
+.Verify{margin-right: 10px; color:#999; overflow: hidden;}
+.swiper-slide p{margin-top: 10px; overflow: hidden;}
+.picture img{width: 75px; height: 75px;}
+.handle{color:#6DC7CF;}
+.handle-top{border-top: 1px solid #EAEAEA; padding-top:10px ;}
+.Complaint-btn{width:114px; height:35px; line-height: 35px; background: #6DC7CF; border-radius: 4px; display: block;
+ float: right;text-align: center; color: #fff; font-size: 16px;margin-top: 10px; position:fixed ; right: 0px;bottom: 0px;
+ z-index: 99;
+}
+.Complaint-btn:hover{color: #fff;}
+.feedback-img img{width: 242px; height:99.5px ; text-align: center; display: block;margin: 30px auto;}
+.feedback-img p {text-align:center; margin: 10px auto; font-size: 18px; font-family: "宋体";}
+.cont-btn{width: 60%; height: 34px; line-height: 34px; border: 1px solid #6DC7CF; border-radius: 4px; display: block;
+text-align: center; font-size: 16px; color: #6DC7CF;
+margin: 25px auto;
+}
+.cont-btn:hover{color: #67B1D6;}
+.handle-pl{font-size:14px ;width: 73%;}
+.cIcon{width:24px; height: 24px;
+background:url(../Images/close2.png) no-repeat; position: absolute;
+display: block; background-size:100% ; margin: -95px 0px 0px 65px;
+}

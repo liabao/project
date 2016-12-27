@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>我的订单</title>
+		<link rel="shortcut icon" href="../Images/logo.png" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/Orderlist.css" />
+	</head>
+	<body>
+		<section class="common-wrapper">
+			<div class="mui-content">
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+					<div class="main mui-scroll div_orderlist">
+						<ul class="mui-table-view mui-table-view-chevron " id="list">
+							<li class="itmelist">
+								<div class="itemorder">
+									<div class="itemorder-title">
+										<span>WSD2016356564846</span>
+										<span class="fr signet">已付款</span>
+									</div>
+									<div class="imc-one">
+										<div class="imco-l">
+											<div class="imco-l-img">
+												<a href="#">
+													<img src="../Images/9614383.jpg" title="">
+												</a>
+											</div>
+										</div>
+										<div class="imco-r-content">
+											<div class="imco-r">
+												<a href="#">植物日记(Plants Diary)玫瑰补水护肤套装控油洁面收毛孔保湿乳</a>
+											</div>
+											<p>金额:<i>100.00</i></p>
+											<p class="number">数量:<i>10盒</i></p>
+										</div>
+									</div>
+									<div class="imc-one">
+										<div class="imco-l">
+											<div class="imco-l-img">
+												<a href="#">
+													<img src="../Images/c2c5e98.png" title="">
+												</a>
+											</div>
+										</div>
+										<div class="imco-r-content imc-pl">
+											<div class="imco-r">
+												<a href="#">植物日记(Plants Diary)玫瑰补水护肤套装控油洁面收毛孔保湿乳</a>
+											</div>
+											<p>金额:<i>100.00</i></p>
+											<div class="mb">
+												<p class="number">数量:<i>10盒</i></p>
+
+											</div>
+										</div>
+									</div>
+                                    <div class="imb-btn-box">
+										<a href="Logistics.html" class="imb-btn2">确认收货</a>
+										<a href="Logistics.html" class="imb-btn2">已发货</a>
+										<a href="Logistics.html" class="imb-btn2">已发货</a>
+									</div>
+								</div>
+							</li>
+						   <li>
+								<div class="itemorder">
+									<div class="itemorder-title">
+										<span>WSD2016356564846</span>
+										<span class="fr signet">待付款</span>
+									</div>
+									<div class="imc-one">
+										<div class="imco-l">
+											<div class="imco-l-img">
+												<a href="#">
+													<img src="../Images/c2c5e98.png" title="">
+												</a>
+											</div>
+										</div>
+										<div class="imco-r-content imc-pl">
+											<div class="imco-r">
+												<a href="#">植物日记(Plants Diary)玫瑰补水护肤套装控油洁面收毛孔保湿乳</a>
+											</div>
+											<p>金额:<i>100.00</i></p>
+											<div class="mb">
+												<p class="number">数量:<i>10盒</i></p>
+
+											</div>
+										</div>
+									</div>
+									<div class="imb-btn-box">
+										<a href="Logistics.html" class="imb-btn">去付款</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="itemorder">
+									<div class="itemorder-title">
+										<span>WSD2016356564846</span>
+										<span class="fr signet">已付款</span>
+									</div>
+									<div class="imc-one">
+										<div class="imco-l">
+											<div class="imco-l-img">
+												<a href="#">
+													<img src="../Images/c2c5e98.png" title="">
+												</a>
+											</div>
+										</div>
+										<div class="imco-r-content imc-pl">
+											<div class="imco-r">
+												<a href="#">植物日记(Plants Diary)玫瑰补水护肤套装控油洁面收毛孔保湿乳</a>
+											</div>
+											<p>金额:<i>100.00</i></p>
+											<div class="mb">
+												<p class="number">数量:<i>10盒</i></p>
+											</div>
+										</div>
+									</div>
+									<div class="imb-btn-box">
+										<a href="Logistics.html" class="imb-btn imb-btn1">未发货</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--订单管理空白-->
+			<div class="orderlist-img" style="display:none ;">
+				<img src="../Images/images5.png" />
+				<p>您还没有相关订单哦</p>
+			</div>
+			<!--订单管理空白-->
+		</section>
+		<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				pullRefresh: {
+					container: "#refreshContainer", //待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+					up: {
+						auto: false,
+						callback: pullupRefresh
+					},
+					down: {
+						callback: pulldownRefresh
+					}
+				}
+
+			});
+			//点击
+			mui("#refreshContainer").on('tap', '.imb-btn', function() {
+					mui.openWindow({			    
+			    url:'Logistics.html'
+			  });
+			})
+			//上拉加载更多
+			function pullupRefresh() {
+				loaded();
+				//是否还有更多数据；若还有更多数据，则传入false; 否则传入true，之后滚动条滚动到底时，将不再显示“上拉显示更多”的提示语，而显示“没有更多数据了”的提示语；
+				mui('#refreshContainer').pullRefresh().endPullupToRefresh(false);
+			}
+			//下拉刷新
+			function pulldownRefresh() {
+
+				loaded();
+				//注意，加载完新数据后，必须执行如下代码，注意：若为ajax请求，则需将如下代码放置在处理完ajax响应数据之后
+				mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+			}
+
+			function loaded() {
+				//下拉刷新显示成功效果
+			$("#list").append("<li><div class='itemorder'><div class='itemorder-title'><span>WSD2016356564846</span><span class='fr signet'>已付款</span></div><div class='imc-one'><div class='imco-l'><div class='imco-l-img'><img src='../Images/images4.png' title=''></div></div><div class='imco-r-content'><div class='imco-r'>植物日记(Plants Diary)玫瑰补水护肤套装控油洁面收毛孔保湿乳</div><p>金额:<i>100.00</i></p><p class='number'>数量:<i>10盒</i></p></div></div><div class='imc-one'><div class='imco-l'><div class='imco-l-img'><img src='../Images/images4.png' title=''></div></div><div class='imco-r-content imc-pl'><div class='imco-r'>植物日记(Plants Diary)玫瑰补水护肤套装控油洁面收毛孔保湿乳</div><p>金额:<i>100.00</i></p><div class='mb'><p class='number'>数量:<i>10盒</i></p></div></div></div><div class='imb-btn-box'><a href='#' class='imb-btn' onclick='EjectDiv('row_col_1|row_col', 'black', 'row_col')'>发货</a></div></div></li>");
+						
+			}
+			
+		</script>		
+	</body>
+
+</html>

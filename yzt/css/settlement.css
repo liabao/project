@@ -1,0 +1,465 @@
+
+/*******结算*********/
+.basic-info .prod-title, .prod-price, .prod-act, .goodCart {
+    position: relative;
+    padding-top: 7px;
+    margin-left: 13px;
+    font-family: "Adobe 黑体 Std R";
+    overflow: hidden;
+}
+.cartList {
+	background: #fff;
+	overflow: hidden;
+	position: relative;
+}
+
+.goodCart .goodimg {
+	float: left;
+}
+
+.goodCart .goodimg img {
+	width: 90px;
+	height: 90px;
+}
+
+.cart-product-cell {
+	padding-left: 100px;
+	padding-right: 10px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.cart-product-name {
+	margin-bottom: 3px;
+	height: 40px;
+	line-height: 20px;
+	overflow: hidden;
+}
+
+.cart-product-name a span {
+	font-size: 16px;
+	line-height: 20px;
+	color: #333; font-family: "Adobe 黑体 Std R";
+}
+
+.shp-cart-item-price {
+	margin-top: 5px;
+	color:#D32A2A;font-size: 16px;
+}
+
+.shp-cart-item-price span {
+	font-size: 18px;
+}
+
+.shp-cart-item-price del {
+	color: #8e8e8e;
+	font-size: 16px;
+}
+
+.minus-btn {
+    width: 22px;
+    height: 25px;
+    line-height: 25px;
+    cursor: pointer;
+    border: 1px solid #DBDBDB;
+    display: block;
+    float: left;
+    text-align: center;
+    border-radius: 3px 0px 0px 3px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-appearance: none;
+    background: #f5f5f5;
+    color: #999;
+}
+
+.plus-btn {
+    width: 22px;
+    height: 25px;
+    line-height: 25px;
+    cursor: pointer;
+    border: 1px solid #DBDBDB;
+    display: block;
+    float: left;
+    text-align: center;
+    border-radius: 0px 3px 3px 0px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-appearance: none;
+    background: #f5f5f5;
+    color: #999;
+}
+
+.order-count-input {
+    width: 50px;
+    cursor: pointer;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #DBDBDB;
+    display: block;
+    float: left;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-appearance: none;
+}
+
+.addSub {
+	width: 100%;
+	position: relative;
+	font-family: "宋体";
+	height: 40px;
+	overflow: hidden;
+}
+
+.addSub p {
+	font-size: 16px;
+	padding-top:4px ;
+}
+
+.num {
+	margin: -30px 0px 0px 90px;
+}
+
+.new-title {
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	background: #F4F4F4;
+	font-size: 16px;
+	padding-left: 13px;
+	color: #8e8e8e;
+	font-family: "宋体";
+}
+
+.new-ship-addr {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding-bottom: 10px;
+	font-family: "宋体";
+}
+
+.new-ship-addr {
+	position: relative;
+}
+
+.new-ship-addr:before {
+	background: url(../Images/bg1.png) no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	height: 5px;
+	width: 100%;
+}
+
+.new-ship-addr:after {
+	background: url(../Images/bg1.png) no-repeat;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: "";
+	height: 5px;
+	width: 100%;
+}
+
+.new-mu-pl {
+	display: none;
+}
+
+.new-mu .new-tit {
+	padding: 13px 0px 0px 13px;
+	font-size: 18px;
+	color: #333;
+	overflow: hidden;
+}
+
+.new-mu .new-tit i {
+	display: inline-block;
+	width: 15px;
+	height: 16px;
+	background: url(../images/checkedOff03.png) no-repeat;
+	background-size: 100%;
+	vertical-align: sub;
+}
+
+.new-mu .new-tit i.cur {
+	background: url(../images/checkedOn03.png) no-repeat;
+	background-size: 100%;
+}
+
+.new-mu {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+.new-p-re .new-txt {
+	color: #8E8E8E;
+}
+
+.new-mu_l {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+.new-mu_l .new-mu_2 {
+	padding: 2px 0px 0px 13px;
+	font-size: 16px;
+	color: #6e6e6e;
+	float: left;
+}
+
+.new-mu_2 {
+	width: 83%;
+}
+
+.new-txt-rd2 {
+	float: right;
+	font-size: 16px;
+	color: #67B1D6;
+	margin: 2px 8px 0px 0px;
+}
+
+.new-txt-rd2 a {
+	color: #6DC7CF;
+}
+
+.new-abtn-type {
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #6DC7CF;
+	font-size: 16px;
+	margin: 10px 0px 0px 13px;
+	border: 2px solid #6DC7CF;
+	border-radius: 5px;
+	display: block;
+	float: left;font-family: "宋体";
+}
+.new-abtn-type:hover{color: #6DC7CF;font-family: "宋体";}
+.new-abtn-type1 {
+	float: right;
+	margin: 16px 14px 0px 0px;
+	/*font-size: 16px;*/
+	font-family: SimSun;
+    letter-spacing: 1px;
+}
+
+.new-abtn-type1 i {
+	width: 15px;
+	height: 8px;
+	background: url(../Images/top.png) no-repeat;
+	background-size: 100%;
+	display: block;
+	float: right;
+	margin: 7px 0px 0px 5px;
+}
+
+.Amount {
+	width: 100%;
+	height: auto;
+	background: #fff;
+	margin-top: 10px;
+	overflow: hidden;
+	font-family: "宋体";
+	padding-top: 10px;
+}
+
+.Amount .Amountmoney,
+.Amountfreight {
+	margin-right: 8px;
+}
+
+.Amountfreight {
+	color: #8E8E8E;
+	line-height: 35px;
+}
+
+.payment {
+	width: 100%;
+	height: auto;
+	background: #fff;
+	padding-bottom: 20px;
+}
+
+.payment {
+	margin-top: 20px;
+	border-top: 1px dashed #5D5D5D;
+	font-size: 16px;
+}
+
+.Amount-tit {
+	padding-left: 9px;
+}
+.grid{width: 93%;margin:0px auto; overflow: hidden;}
+.grid{height: 35px; line-height: 35px;margin-top:10px ;}
+.grid i {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background: url(../images/checkedOff02.png) no-repeat;
+    background-size: 100%;
+    vertical-align: sub;
+}
+.grid i.cur {
+    background: url(../images/checkedOn02.png) no-repeat;
+    background-size: 100%;
+}
+.grid em{margin-left: 7px;font-family: "Adobe 黑体 Std R";}
+.grid span{font-family: "Adobe 黑体 Std R";}
+.icon-computer1{
+	width: 23.5px;
+	height: 21.5px;
+	vertical-align: sub;
+}
+.baseBtn {
+    background: #6dc7cf;
+    color: #fff;
+    font-size: 18px;
+    width: 95%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    outline: none;
+    position: fixed;
+    bottom: 20px;
+    left: 0px;
+    text-align: center;
+    font-family: "Adobe 黑体 Std R";
+    margin: 0 auto;
+    display: block;
+    margin-left: 10px;
+    box-shadow: 1px 4px 8px rgba(9, 193, 187, 0.2), 0px 0px 2px rgba(55, 201, 216, 0.61);
+    z-index: 999;
+}
+
+.baseBtn:hover {
+	color: #fff;
+}
+.Payment-password{
+	width: 80%;
+    height:250px;
+    background: #fff;
+    position: fixed;
+    top:28%;
+    left:9%;
+    z-index: 99999999;
+    display: none;
+    border-radius: 4px;
+    font-family: "宋体";
+    font-size: 16px;
+}
+.Payment-password p{margin:23px 0px 0px 25px;}
+.Payment-password p input{
+	width: 90%; height: 30px; line-height: 30px; border-bottom: 1px solid #8e8e8e;
+	outline: none;    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-appearance: none;
+	}
+.Payment-password input:focus {
+	outline: none;
+	border-color: #6DC7CF;
+}
+.Forget-password{float:right; font-size: 14px;margin: 10px 20px 0px 0px ; color: #6DC7CF; overflow: hidden;}
+/**个人中心弹出窗口**/
+
+.black {
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	/*支持rgba的浏览器*/
+	filter: alpha(opacity=70);
+	z-index: 999999;
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000);
+	/*IE8支持*/
+	-ms-filter: ”progid: DXImageTransform.Microsoft.alpha(opacity=50);
+}
+
+.tanEject {
+	width: 75%;
+	height: 195px;
+	background: #fff;
+	position: fixed;
+	top: 32%;
+	left: 13%;
+	z-index: 99999999;
+	display: none;
+	border-radius: 4px;
+}
+
+.purchase {
+	text-align: center;
+	padding-top: 39px;
+	font-family: "宋体";
+}
+
+.close {
+	height: 25px;
+	float: right;
+	margin: 7px 10px 0px 0px;
+}
+
+.blue {
+	color: #66b2d4;
+}
+.bab-btn{width:96% ; height: 37px; line-height: 37px;
+background: #6DC7CF; text-align: center; font-size: 18px; color: #FFF;
+display: block; margin: 10px auto; border-radius: 4px;font-family: "宋体";
+box-shadow: 1px 4px 8px rgba(9, 193, 187, 0.2), 0px 0px 2px rgba(55, 201, 216, 0.61);
+}
+.bab-btn1{width: 90%;margin: 50px auto;}
+/************交易详情*************/
+
+.details {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin-top: 50px;
+	font-family: "宋体";
+}
+
+.detailsimg { 
+	text-align: center;
+	margin: 0 auto;
+}
+
+.detailsimg img {
+	width: 49.5px;
+	height: 49.5px;
+}
+
+.details p {
+	text-align: center;
+	font-size: 18px;
+	color: #8e8e8e;
+}
+
+.ViewOrders {
+	text-align: center;
+	font-size: 18px;
+	color: #67b1d6;
+	display: block;
+	margin-top: 10px;
+}
+
+.ViewOrders:hover {
+	color: #67b1d6;
+}
+
+.detailbtn {
+	width: 295px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	border: 2px solid #84c0de;
+	border-radius: 5px;
+	margin: 30px auto;
+}
+.shp-cart-item-price span em{color: #D32A2A;}

@@ -1,0 +1,280 @@
+.header {
+	height:auto;
+	background: #6dc7cf;
+	overflow: hidden;
+	position: relative;
+}
+
+.header .my-info {
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: middle;
+	width: 74px;
+	height: 74px;
+	 background:url(../Images/my-bg.png) no-repeat ;
+	 background-size: 100% 100%;
+	 margin:0px 0px 0px 9px;
+}
+
+.header .my-info img {
+	width:66px;
+	height:66px;
+	border-radius: 50%;
+	margin: 4px auto;
+	text-align: center;
+	display: block;
+}
+.header .my-person-info {
+	width: 60%;
+	vertical-align: middle;
+	position: relative;
+	display: inline-block;
+	margin:10px 0px 8px 10px;
+}
+
+.header .my-person-info p {
+	line-height: 1.93rem;
+	font-size: 1.07rem;
+	color: #fff;
+	font-family: "宋体";
+	width: 100%;
+    overflow: hidden;
+    word-break: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.header .my-person-info .font-name{
+	width:70%;
+    overflow: hidden;
+    word-break: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: absolute;
+}
+.header .my-person-info .font-black {
+	color: #fff;
+}
+.header .my-person-info .icon-right{
+	width:15%; text-align: right;
+}
+.header .my-person-info .icon-right img{
+	width: 9.5px; height:17px;
+	
+}
+.icon-name{
+	width:90px ;
+	height: 25px;
+	background: url(../Images/icon-name.png) no-repeat;
+	background-size: 100% 100%;
+	display: block;
+	color:#fff;
+	line-height: 25px;
+	text-align: center;
+	 overflow: hidden;
+    word-break: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+	}
+.icon-name i{margin-left: 15px; font-size: 14px;
+  width: 60px;text-align: center;
+}
+.icon-name i:hover{color: #fff;}
+.header .header-nav {
+	width: 100%;
+	margin-top: 0.86rem;
+}
+.font-sen{margin-right: 10px;}
+.header .header-nav li {
+	float: left;
+	width: 30%;
+	text-align: center;
+	margin-left: 0.57rem;
+}
+
+.header .header-nav .mar {
+	height: 2.14rem;
+	background: #67b1d6;
+	border-radius: 50px;
+	line-height: 2.14rem;
+	color: #fff;
+	font-size: 1.07rem;
+}
+
+.header .header-nav .mar a {
+	color: #fff;
+}
+
+.my-content {
+	width: 100%;
+	height:65px;
+	background:#FFF;
+	display: block;
+	background-size: 100% 100%;
+}
+
+.my-content li {
+	width: 33%;
+	float: left;
+	text-align: center;
+	font-family: "宋体";
+	line-height: 2.86rem;
+}
+
+.myID-num {
+	display: block;
+	height: 2.14rem;
+	margin: 0 auto;
+	font-size: 20px;
+	color: #333;
+}
+
+.myID-text {
+	font-size: 1.07rem;
+	color: #999;
+}
+.nav {
+	width: 100%;
+	background: #fff;
+	height:auto;
+	margin-top:175px;
+	overflow: hidden;
+
+}
+
+.nav .quick-entry-link {
+	float: left;
+	width: 24.74%;
+	height: 6.79rem;
+	border-right: 1px solid #eaeaea;
+	text-align: center;
+	line-height: 5.58rem;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.nav .quick-box {
+	display: block;
+	height: 1.79rem;
+}
+/*
+.nav .superBan {
+	border-bottom: none;
+}*/
+
+.nav .quick-entry-link span {
+	font-size: 0.93rem;
+	font-family: "宋体";
+	color: #333;
+}
+
+.nav .brandBan {
+	border-right: none;
+}
+/*********全部分类**********/
+.category{
+	    overflow: hidden;
+}
+.categoryIns{	
+	width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.categoryS {
+    width: 80px;
+}
+
+.categoryTab li {
+/*	width: 100px;*/
+    height: 80px;
+    line-height: 80px;
+    background: #F1F1F1;
+    text-align: center;
+    border-bottom: 1px solid #9b9b9b;
+}
+.categoryTab li a {
+    font-size:18px;
+    color: #4a4949;
+    display: block;
+    border-right: 1px solid #9b9b9b;
+    font-family: "Adobe 黑体 Std R";
+}
+.categoryTab li.cur {
+    background: #fff;
+}
+.categoryTab li.cur a {
+    color:#6DC7CF;
+    border-color: #fff;
+    border-left: 2px solid #6DC7CF;
+}
+.categoryWrap {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.categoryWrapper {
+
+    margin: 0 10px;
+}
+.categoryCon{width:75%;}
+.categoryTitle {
+    font-size:18px;
+    padding: 15px 0;
+    color: #333;
+}
+.categoryBrand {
+    width: 100%;
+}
+.categoryBrand li {
+    float: left;
+    width: 33%;
+    text-align: center;
+
+}
+.categoryBrand li a {
+    display: block;
+    color: #707070;
+}
+.categoryBrand-img{
+	width: 70px;
+	height: 70px;
+	border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    display: block;
+}
+.categoryBrand li img {
+    width:50px;
+    
+}
+.categoryBrand li p {
+    padding: 5px 0;
+    height: 20px;
+    line-height: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/********一指涛帮助*********/
+.help-concent p{
+	height: 40px;
+	line-height: 40px;
+	margin-left: 10px;
+	font-family: "Adobe 黑体 Std R";
+	font-size: 16px;
+	overflow: hidden;
+}
+.help-concent-title{margin-top: 10px;overflow: hidden;}
+.help-concent-title span{
+  width: 30%;font-family: "Adobe 黑体 Std R";
+  float: left;
+  text-align: left;
+  color: #474747;    
+   overflow: hidden;
+    word-break: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    margin-left: 6px;
+}
+.help-concent-title span:nth-of-type(3){
+	text-align: right;width: 30%;
+}
+.help-concent-title span img{width: 15px;text-align: right;}
+.video video{width: 100%;}
+.p-title15{border-bottom: 1px solid #DFDFDF;margin-left:5px ;font-family: "Adobe 黑体 Std R"; color: #474747; }

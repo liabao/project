@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>发起拼购</title>
+		<link rel="shortcut icon" href="../Images/logo.png" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/NPersonGroup.css" />
+	</head>
+	<body class="header-body">
+		<section class="common-wrapper">
+			<div class="launch">
+				<div class="p-title12">
+					<span><img src="../Images/close3.png"></span>
+					<span>拼购发起后不可撤销,所有售后均有最终接单厂家提供服务</span>
+				</div>
+				<div class="similar-product-titel">
+					<p>图片大小为<em>500*500</em>，最多可添加<em>9</em>张图片</p>
+					<ul id="warp">
+						<li>
+							<input type="file" onchange="fileChange(this)" class="warp-img">
+							<img src="../Images/images14.png">
+							<span class="del cIcon" style="display:none" onclick="clearFile(this)"></span>
+						</li>
+					</ul>
+				</div>
+				<div class="similar-product1">
+					<form>
+						<div class="similar-input">
+							<input type="text" placeholder="请输入拼购商品的名称" />
+						</div>
+						<div class="similar-input">
+							<input type="text" placeholder="请输入拼购结束时间" />
+						</div>
+						<div class="similar-input">
+							<input type="text" placeholder="请输入接受本品的最高价格" />
+						</div>
+						<div class="similar-input">
+							<input type="text" placeholder="请输入作为发起人的采购数量" />
+						</div>
+						<div class="similar-input">
+							<textarea rows="5" placeholder="商品特殊要求"></textarea>
+						</div>
+					</form>
+				</div>
+			</div>
+			<a href="#" class="submit-btn" onclick="EjectDiv('row_col_6|row_col', 'black', 'row_col')">保存</a>
+		</section>
+		<!--弹出发起拼购保存之后开始-->
+		<div class="black" id="row_col" onclick="HideDiv()"></div>
+		<div class="network" id="row_col_6">
+            <p>您发起的拼购已经提交后台经行审核，审核周期为<em>48小时</em>,请注意查看短信通知</p>
+    <span class="fr" onclick="closeDiv('row_col|row_col_6')">确定</span>
+		</div>
+		<!--弹出发起拼购保存之后结束-->
+		<script type="text/javascript" src="../js/jquery-1.10.2.min.js" ></script>
+		<script type="text/javascript" src="../js/recharge.js" ></script>
+		<script type="text/javascript" src="../js/LaunchFight.js" ></script>
+
+	</body>
+
+</html>

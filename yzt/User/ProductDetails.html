@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>产品详情</title>
+		<link rel="shortcut icon" href="../Images/logo.png" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/swiper.min.css" />
+		<link rel="stylesheet" href="../css/NPersonGroup.css" />
+		<style>
+			.ladder{width: 100%; height: auto; overflow: hidden;}
+			.ladder li{float: left;width: 32%;text-overflow: ellipsis;display: -webkit-box;
+			-webkit-line-clamp: 2;-webkit-box-orient: vertical; overflow: hidden; text-align: center;}
+			.ladder li:nth-of-type(1){text-align: left;margin-left:10px ;}
+			.ladder li span{font-family: "Adobe 黑体 Std R"; color:#D32A2A; font-size: 20px;}
+			.ladder li span i{font-size: 14px;font:-webkit-small-control;}
+			.ladder li p{color: #8E8E8E;}
+			.num-title{width: 100%;margin-left: 10px;}
+			.car-btn3{width: 25%;border-right: 1px solid #DFDFDF;}
+			.car-btn3 img{vertical-align: inherit;}
+			.car-btn4{width:50%;}
+			.car-btn5{width:25%; text-align: center; color: #333;background:#FFF ;font-family: "Adobe 黑体 Std R"; }
+		</style>
+	</head>
+
+	<body class="header-body">
+		<section class="common-wrapper">
+			<!--banner开始-->
+			<div class="shopBanner shopBanner-out">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#"><img src="../Images/images4.png"></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="../Images/images4.png"></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="../Images/images4.png"></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="../Images/images4.png"></a>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<!--banner结束-->
+			<!--内容-->
+			<div class="detail">
+				<p class="p-title10">美容院超豪华软包</p>
+				<!--阶梯-->
+				<ul class="ladder">
+					<li>
+						<span><i>¥</i>25600.00</span>
+						<p>10件起</p>						
+					</li>
+					<li>
+						<span><i>¥</i>156.00</span>
+						<p>10-30件</p>						
+					</li>
+					<li>
+						<span><i>¥</i>100.00</span>
+						<p>≥40件</p>						
+					</li>
+				</ul>
+				<!--阶梯-->
+				<p class="num-title">
+					<span class="fl Marke">市场价：<del>￥500元</del></span>
+					<span class="fr" style="margin-right:20px ;">
+						<span class="btn minus-btn" onclick="min(this)">-</span>
+						<input name="order-count-input" class="order-count-input" type="tel" value="1">
+						<span class="btn plus-btn" onclick="add(this)">+</span>
+					</span>
+				</p>
+				<div class="header-hight"></div>
+				<ul class="consulting">
+					<li class="cur"><a href="#">详情介绍</a></li>
+					<li><a href="#">产品咨询</a></li>
+				</ul>
+				<div class="Detailed-content1">
+					<div class="Detailed-center">
+						<div class="Detailed-center-img">
+							<p>
+								<img src="../Images/images16.png">
+								<img src="../Images/images17.png">
+							</p>
+						</div>
+					</div>
+					<div class="Detailed-center" style="display:none ;">
+						<ul>
+		                	<li>
+		                		<div class="Complaint-pl">
+		                			<div class="Complaint-left fl">Q</div>
+		                			<div class="swiper-slide fr">
+		                				<p><span class="Complaint-time">13800008888</span><span class="fr Verify">2016-09-15</span></p>
+		                				<p>这是什么产品啊  怎么会这样这是什么产品啊？有包送么有包装送么有装送么有包装送么</p>
+		                			</div>
+		                		</div>
+		                		<div class="Complaint-pl">
+		                			<div class="Complaint-left Complaint-color fl">A</div>
+		                			<div class="swiper-slide handle-top fr">
+		                				<p>这是什么产品啊  怎么会这样这是什么产品啊？有包送么有包装送么有装送么有包装送么</p>
+		                			</div>
+		                		</div>
+		                	</li>
+		                	<li>
+		                		<div class="Complaint-pl">
+		                			<div class="Complaint-left fl">Q</div>
+		                			<div class="swiper-slide fr">
+		                				<p><span class="Complaint-time">13800008888</span><span class="fr Verify">2016-09-15</span></p>
+		                				<p>这是什么产品啊  怎么会这样这是什么产品啊？有包送么有包装送么有装送么有包装送么</p>
+		                			</div>
+		                		</div>
+		                		<div class="Complaint-pl">
+		                			<div class="Complaint-left Complaint-color fl">A</div>
+		                			<div class="swiper-slide handle-top fr">
+		                				<p>这是什么产品啊  怎么会这样这是什么产品啊？有包送么有包装送么有装送么有包装送么</p>
+		                			</div>
+		                		</div>
+		                	</li>
+						</ul>
+						<a href="javascript:;" onclick="loadData()" id="more">点击加载更多</a>
+						<a href="PublishedConsultation.html" class="my-Consultation"></a>
+					</div>
+				</div>
+			</div>
+			<div class="similar-btn">			
+				<span class="fl car-btn3"> 
+					<img src="../Images/like.png"><i>收藏</i></span>
+					<span class="fl car-btn5"onclick="window.location.href='../Settlement.html'">去结算</span>
+				<span class="fr car-btn4" onclick="closeDiv('row_col|row_col_1')">加入采购单</span>
+
+			</div>
+		</section>
+		<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="../js/recharge.js"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script language="javascript"> 
+			var mySwiper = new Swiper('.swiper-container',{
+			pagination : '.swiper-pagination',
+			autoplay:5000,
+			})
+		</script>
+	</body>
+
+</html>

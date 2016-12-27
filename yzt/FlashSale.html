@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>限时抢购</title>
+		<link rel="shortcut icon" href="Images/logo.png" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+					<div class="main mui-scroll">
+						<ul class="mui-table-view mui-table-view-chevron" id="list">
+							<li>
+								<div class="similar-product-tite-img"><img src="Images/banner-images4.png"></div>
+								<div class="similar-product-text10 similar-product-text3">
+									<p>平台精品推荐</p>
+									<p></p>
+									<p>商品卖点商品卖点商品卖点商品卖点</p>
+									<p>
+										<span style="color: #6DC7CF;">满<em>10</em>张送<em>1</em>张 </span>
+									</p>
+								</div>
+								<div class="marBot">
+									<p class="similar-product-title4">
+										<a href="">美容院超豪华软包美容床美容院超豪华软包美容床美容院超豪华软包美容床美容院超豪</a>
+									</p>
+									<p class="similar-product-title5">
+										<span>热抢 <i>￥150</i></span>
+										<del class="fr">￥500元</del>
+									</p>
+									<p class="similar-product-title6">
+										<span><em><img src="Images/marClock.png"></em><strong>还剩</strong><i>15时33分56秒</i></span>
+										<span class="fr">已定数量:<em>5898</em></span>
+									</p>
+									<p class="num-title">
+										<span class="btn minus-btn" onclick="min(this)">-</span>
+										<input name="order-count-input" class="order-count-input" type="tel" value="1">
+										<span class="btn plus-btn" onclick="add(this)">+</span>
+										<span class="fr car-btn car-btn1">加入采购单</span>
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="similar-product-tite-img"><img src="Images/banner-images4.png"></div>
+								<div class="similar-product-text10 similar-product-text3">
+									<p>平台精品推荐</p>
+									<p></p>
+									<p>商品卖点商品卖点商品卖点商品卖点</p>
+									<p>
+										<span style="color: #6DC7CF;">满<em>10</em>张送<em>1</em>张 </span>
+									</p>
+								</div>
+								<div class="marBot">
+									<p class="similar-product-title4">
+										<a href="">美容院超豪华软包美容床美容院超豪华软包美容床美容院超豪华软包美容床美容院超豪</a>
+									</p>
+									<p class="similar-product-title5">
+										<span>热抢 <i>￥150</i></span>
+										<del class="fr">￥500元</del>
+									</p>
+									<p class="similar-product-title6">
+										<span><em><img src="Images/marClock.png"></em><strong>还剩</strong><i>15时33分56秒</i></span>
+										<span class="fr">已定数量:<em>5898</em></span>
+									</p>
+									<p class="num-title">
+										<span class="btn minus-btn" onclick="min(this)">-</span>
+										<input name="order-count-input" class="order-count-input" type="tel" value="1">
+										<span class="btn plus-btn" onclick="add(this)">+</span>
+										<span class="fr car-btn car-btn1">加入采购单</span>
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--底部导航开始-->
+		<footer>
+			<div class="b_foot">
+				<div class="b_f_left" onclick="window.location.href='TodayIndex.html'">
+					<div class="b_f_img" id="dataTypeImg5">
+					</div>
+					<span class="b_f_text_02">今日推荐</span>
+				</div>
+				<div class="b_f_left active" onclick="window.location.href='FlashSale.html'">
+					<div class="b_f_img" id="activitdataTypeImg6">
+					</div>
+					<span class="b_f_text_02 ">限时抢购</span>
+				</div>
+				<div class="b_f_left " onclick="window.location.href='Promotion.html'">
+					<div class="b_f_img" id="dataTypeImg7">
+					</div>
+					<span class="b_f_text_02">促销耗材</span>
+				</div>
+				<div class="b_f_left" onclick="window.location.href='javascript:;'">
+					<div class="b_f_img" id="dataTypeImg8">
+					</div>
+					<span class="b_f_text_02">品牌耗材</span>
+				</div>
+			</div>
+		</footer>
+		<!--底部导航结束-->
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/recharge.js"></script>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				pullRefresh: {
+					container: "#refreshContainer", //待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+					up: {
+						auto: false,
+						callback: pullupRefresh
+					},
+					down: {
+						callback: pulldownRefresh
+					}
+				}
+
+			});
+			//点击
+			mui("#refreshContainer").on('tap', '.minus-btn', function() {
+				min(this);
+			})
+			mui("#refreshContainer").on('tap', '.plus-btn', function() {
+				add(this);
+			})
+
+			//上拉加载更多
+			function pullupRefresh() {
+				loaded();
+				//是否还有更多数据；若还有更多数据，则传入false; 否则传入true，之后滚动条滚动到底时，将不再显示“上拉显示更多”的提示语，而显示“没有更多数据了”的提示语；
+				mui('#refreshContainer').pullRefresh().endPullupToRefresh(false);
+			}
+			//下拉刷新
+			function pulldownRefresh() {
+
+				loaded();
+				//注意，加载完新数据后，必须执行如下代码，注意：若为ajax请求，则需将如下代码放置在处理完ajax响应数据之后
+				mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+			}
+
+			function loaded() {
+				//下拉刷新显示成功效果
+				$("#list").append('<li>'+
+								'<div class="similar-product-tite-img"><img src="Images/banner-images4.png"></div>'+
+								'<div class="similar-product-text10 similar-product-text3">'+
+									'<p>平台精品推荐</p>'+
+									'<p></p>'+
+									'<p>商品卖点商品卖点商品卖点商品卖点</p>'+
+									'<p>'+
+										'<span style="color: #6DC7CF;">满<em>10</em>张送<em>1</em>张 </span>'+
+									'</p>'+
+								'</div>'+
+								'<div class="marBot">'+
+									'<p class="similar-product-title4">'+
+										'<a href="">美容院超豪华软包美容床美容院超豪华软包美容床美容院超豪华软包美容床美容院超豪</a>'+
+									'</p>'+
+									'<p class="similar-product-title5">'+
+										'<span>热抢 <i>￥150</i></span>'+
+										'<del class="fr">￥500元</del>'+
+									'</p>'+
+									'<p class="similar-product-title6">'+
+										'<span><em><img src="Images/marClock.png"></em><strong>还剩</strong><i>15时33分56秒</i></span>'+
+										'<span class="fr">已定数量:<em>5898</em></span>'+
+									'</p>'+
+									'<p class="num-title">'+
+										'<span class="btn minus-btn" onclick="min(this)">-</span>'+
+										'<input name="order-count-input" class="order-count-input" type="tel" value="1">'+
+										'<span class="btn plus-btn" onclick="add(this)">+</span>'+
+										'<span class="fr car-btn car-btn1">加入采购单</span>'+
+									'</p>'+
+								'</div>'+
+							'</li>');
+			}
+		</script>
+	</body>
+
+</html>

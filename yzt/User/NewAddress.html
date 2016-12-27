@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>新建地址</title>
+		<link rel="shortcut icon" href="../Images/logo.png" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/sm.css" />
+		<link rel="stylesheet" href="../css/Amount.css" />
+	</head>
+	<body class="header-body">
+		<section class="common-wrapper">
+
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label>姓名</label>
+					<input type="text" placeholder="请输入您的真实姓名">
+				</div>
+				<div class="mui-input-row">
+					<label>手机号码</label>
+					<input type="text" class="mui-input-clear" placeholder="请输入您的联系手机号">
+				</div>
+				<div class="mui-input-row">
+					<label>所在地区</label>
+					<input type="text" class="mui-input-clear" placeholder="请选择省市区" id="city-picker">
+				</div>
+				<div class="mui-input-row">
+					<label>详细地址</label>
+					<input type="text" class="mui-input-clear" placeholder="请填写详细的收货地址">
+				</div>
+			</form>
+			<div class="address-foot">
+				<i><input name="aIsdefault" type="hidden" value="1"></i>设为默认收货地址
+			</div>			
+				<a href="#" class="submit">保存</a>
+		</section>
+		<script type="text/javascript" src="../js/zepto.js" ></script>
+		<script type="text/javascript" src="../js/sm.js" ></script>
+	    <script type="text/javascript" src="../js/sm-city-picker.js" ></script>
+	    <script type="text/javascript" src="../js/recharge.js" ></script>
+		<script type="text/javascript">
+				  $("#city-picker").cityPicker({
+				    toolbarTemplate: '<header class="bar bar-nav">\
+				    <button class="button button-link pull-right close-picker">确定</button>\
+				    <h1 class="title">选择收货地址</h1>\
+				    </header>'
+				  });	
+			</script>
+	</body>
+
+</html>

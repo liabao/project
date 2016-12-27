@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>中奖记录</title>
+		<link rel="shortcut icon" href="../Images/logo.png" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/winning.css" />
+		<link rel="stylesheet" href="../css/conner.css" />
+		<style>.mui-content{background: #fff;}</style>
+	</head>
+	<body class="header-body">
+		<section class="common-wrapper">
+		  <div class="mui-content">
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+					<div class="winning mui-scroll">
+						<ul class="mui-table-view mui-table-view-chevron" id="list">
+					<li>
+						<i class="node-icon"></i>
+						<div class="winning-time">
+							<p class="date logis-detail-d">2016-08-21</p>
+							<ul>
+								<li>
+									<span>大女人美颜坊</span>
+									<span>摇拓拓:<i>三等奖</i></span>
+									<span onclick="EjectDiv('row_col_5|row_col', 'black', 'row_col')">已领奖</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<i class="node-icon"></i>
+						<div class="winning-time">
+							<p class="date logis-detail-d">2016-08-21</p>
+							<ul>
+								<li>
+									<span>大女人美颜坊</span>
+									<span>摇拓拓:<i>三等奖</i></span>
+									<span>已领奖</span>
+								</li>
+								<li>
+									<span>大女人美颜坊</span>
+									<span>摇拓拓:<i>三等奖</i></span>
+									<span class="blue">未领奖</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<i class="node-icon"></i>
+						<div class="winning-time ">
+							<p class="date logis-detail-d">2016-08-21</p>
+							<ul>
+								<li>
+									<span>大女人美颜坊</span>
+									<span>摇拓拓:<i>三等奖</i></span>
+									<span class="blue">未领奖</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--空白页面-->
+					<div class="content" style="display:none ;">
+						<img src="../Images/images9.png" width="179px" height="124px">
+						<p>您暂无中奖记录</p>				
+			       </div>
+              <!--空白页面-->
+		</section>
+		<!---已领奖开始-->
+		   	<div class="black" id="row_col" onclick="HideDiv()"></div>
+		   	   <div class="network" id="row_col_5">
+		   	   	  <span class="fr close1" onclick="closeDiv('row_col|row_col_5')">
+		   	   	  	<img src="../Images/close.png" width="13px" height="13px">
+		   	   	 </span>
+		   	   	<div class="purchase">
+			   	    <div class="header">
+			  	  	 <span class="my-info"><img src="../Images/my1.png" alt=""></span>
+			  	  	 <div class="my-person-info">
+			  	  	 	<p class="font-black">大女人美颜坊</p>
+			  	  	 	<p><span><img src="../Images/phone.png"width="12px" height="16px"></span><span class="phone">18052342010</span></p>		
+			  	  	 </div>
+		  	      </div>
+		  	      <div class="End-times">
+		  	      	  <span>本活动结束日期:<span>2016.06.02</span></span>
+		  	      </div>
+		  	      <div class="Winning-date">
+		  	      	 <span class="winning-left">本活动结束日期:<span>2016.06.02</span></span>
+		  	      	 <span class="fr gray-right">已领奖</span>
+		  	      </div>
+		  	      <ul class="winning-comtent">
+		  	      	 <li>
+		  	      	 	<span>疯狂摇活动</span>
+		  	      	 	<span>二等奖</span>
+		  	      	 	<span>500金币</span>
+		  	      	 </li>
+		  	      	 <li>
+		  	      	 	<span>疯狂摇活动</span>
+		  	      	 	<span></span>
+		  	      	 	<span>500金币</span>
+		  	      	 </li>
+		  	      	 <li>
+		  	      	 	<span>疯狂摇活动</span>
+		  	      	 	<span></span>
+		  	      	 	<span>500金币</span>
+		  	      	 </li>		  	      	 
+		  	      	 <li>
+		  	      	 	<span>疯狂摇活动</span>
+		  	      	 	<span></span>
+		  	      	 	<span>500金币</span>
+                   </li>
+		  	      </ul>
+		   	   	 </div>
+		   	</div>
+		<!---已领奖结束 -->
+		 <script type="text/javascript" src="../js/jquery-1.10.2.min.js" ></script>
+         <script type="text/javascript" src="../js/mui.min.js" ></script>
+	     <script type="text/javascript" src="../js/recharge.js" ></script>
+	     <script type="text/javascript">
+			mui.init({
+				pullRefresh: {
+					container: "#refreshContainer", //待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+					up: {
+						auto: false,
+						callback: pullupRefresh
+					},
+					down: {
+						callback: pulldownRefresh
+					}
+				}
+
+			});
+			//点击
+			mui("#refreshContainer").on('tap', 'span', function() {
+					mui.openWindow({			    
+			    url:''
+			  });
+			})
+			//上拉加载更多
+			function pullupRefresh() {
+				loaded();
+				//是否还有更多数据；若还有更多数据，则传入false; 否则传入true，之后滚动条滚动到底时，将不再显示“上拉显示更多”的提示语，而显示“没有更多数据了”的提示语；
+				mui('#refreshContainer').pullRefresh().endPullupToRefresh(false);
+			}
+			//下拉刷新
+			function pulldownRefresh() {
+
+				loaded();
+				//注意，加载完新数据后，必须执行如下代码，注意：若为ajax请求，则需将如下代码放置在处理完ajax响应数据之后
+				mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+			}
+
+			function loaded() {
+				//下拉刷新显示成功效果
+			$("#list").append('<li>'+
+						'<i class="node-icon"></i>'+
+						'<div class="winning-time">'+
+							'<p class="date logis-detail-d">2016-08-21</p>'+
+							'<ul>'+
+								'<li>'+
+									'<span>大女人美颜坊</span>'+
+									'<span>摇拓拓:<i>三等奖</i></span>'+
+									'<span>已领奖</span>'+
+								'</li>'+
+							'</ul>'+
+						'</div>'+
+					'</li>');
+			}
+		</script>	
+
+	</body>
+</html>

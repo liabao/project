@@ -1,0 +1,180 @@
+.content{width: 100%; height: auto; overflow: hidden;margin-top: 50px;}
+.content img{text-align: center;display: block; margin: 0 auto;}
+.content p{text-align: center;margin-top:17px ;font-family: "Adobe 黑体 Std R"; color: #5d5d5d; font-size: 18px;}
+.orInfo-nav{
+	width: 100%; height: 46px; line-height: 46px;
+	background:#fff; overflow: hidden;position: fixed;
+	top: 0px; left: 0px;
+}
+.orInfo-nav li{
+	width:50%;float: left;
+	text-align: center;
+	border-bottom: 1px solid #DFDFDF;
+}
+.orInfo-nav .cur a{
+	border-bottom: 2px solid #6DC7CF;
+	height: 44px; display: inline-block;
+	width:80px; color:#6DC7CF;font-family: "宋体";
+	font-size:16px ;
+}
+.orInfo-nav li a{
+	color:#333;font-family: "宋体";font-size:16px ;
+}
+.Coupon-comtent{
+	width: 100%; height: auto;padding-bottom: 10px;
+	overflow: hidden;margin-top:48px ;
+}
+.pepper-w{
+    display: block;
+    /*background: #fff;
+    border: 1px solid #f2f2f2;*/
+    border-radius: 6px;
+    width:95%;
+    margin-bottom: 10px;
+    position: relative;
+    margin: 0 auto;
+    background:url(../Images/coupTop-by.png) no-repeat ;
+    background-size:100% 100% ;
+    height:176px ;
+}
+.pepper-w .couptop>div {
+    display: table-cell;
+    vertical-align: middle;
+}
+.pepper-w .couptop>div {
+    display: table-cell;
+    vertical-align: middle;
+}
+.pepper-w .clright {
+    width: 100%;
+    padding-left: 10px;
+}
+.couponCon :last-child {
+    margin-bottom: 0;
+}
+.pepper-w .clright .d1 {
+    overflow: hidden;
+    line-height: 18px;
+    color: #333;
+    font-size:20px;
+    position: relative;
+    word-break: break-all;
+    -ms-word-break: break-all;
+    max-height: 54px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;text-align: center;
+    -webkit-box-orient: vertical;font-family: "Adobe 黑体 Std R";
+}
+.pepper-w .clright .d2 {
+    overflow: hidden;
+    line-height: 18px;
+    color: #333;
+    font-size:20px;
+    position: relative;
+    word-break: break-all;
+    -ms-word-break: break-all;
+    max-height: 54px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;font-family: "Adobe 黑体 Std R";
+    -webkit-line-clamp: 3;    margin-top: 10px;
+    -webkit-box-orient: vertical;text-align:center;
+}
+.couponCon :last-child {
+    margin-bottom: 0;
+}
+.coupList{margin-top:6px;}
+.pepper-w .clleft .d1 {
+    font-size: 40px;
+    color: #6DC7CF;
+    text-align: center;
+   font-family: "Adobe 黑体 Std R";
+}
+.pepper-w .clleft .d1 span {
+    font-size: 40px;
+}
+.couponCon :last-child {
+    margin-bottom: 0;
+}
+.pepper-w .clleft .d2 {
+    color: #5d5d5d;font-family: "Adobe 黑体 Std R";
+    font-size: 20px;
+    text-align: center;line-height: 15px;
+}
+/*.pepper-w .coupbot {
+    background: url(../Images/coupTop.png)no-repeat;
+    background-size:100% 100%;
+    width: 96%;
+
+}*/
+.pepper-w>div {
+    display: table;
+    vertical-align: top;
+    padding:20px 0px 0px 12px;
+    width: 100%;
+}
+/*.pepper-w .coupbot1 {
+    background:url(../Images/coupbot1.png)no-repeat;
+    background-size:100% 100%;
+    width: 96%;
+}*/
+.coupList .coupbot1{margin-top: 25px;}
+.coupList .coupbot1 p {
+color: #8e8e8e;font-family: "Adobe 黑体 Std R";
+}
+.coupList .coupbot1 .coupbot-pl{margin-right:30px;color:#6DC7CF;}
+.coupList .delect-btn {
+    background: #d76766;
+    width: 16%;
+}
+.coupList .share-pl, .Additional, .End {
+    width: 5%;
+    color: #fff;
+    background: #c2c2c2;
+    z-index: 999;
+    display: block;
+    text-align: center;
+    float: left;
+    padding-top: 10px;
+}
+.item{
+border-bottom: 1px #e1e1e1 solid;
+width: 125%;
+overflow: hidden;
+position: relative;
+display: -webkit-box;
+-webkit-transition: all 0.3s linear;
+}
+.item-wrap .item .txt-item{
+padding-top: 10px;
+margin-right:25px;
+font-size: 14px;
+line-height: 24px;
+color: #333;
+-webkit-box-flex:1;
+}
+.txt-item .txt{height: 50px; line-height: 50px;}
+.txt-item .txt span{
+	width:25%; float: left;
+	text-align: center;
+}
+.item-wrap .item .arrow{
+width: 0;
+height: 0;
+line-height: 0;
+font-size: 0;
+border-style: solid;
+border-color: transparent transparent transparent #fff;
+border-width: 8px 0px 8px 8px;
+position: absolute;
+right: 22%;
+top: 50%;
+margin-top: -8px;
+}
+
+.item-wrap .selected{
+-webkit-transform: translate(-16%);
+-webkit-transition: all 0.3s linear;
+}

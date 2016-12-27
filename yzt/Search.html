@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>搜索</title>
+		<link rel="shortcut icon" href="Images/logo.png" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/search.css" />
+	</head>
+
+	<body class="header-body">
+		<section class="common-wrapper">
+			<div class="m_header">
+				<div class="searchform">
+					<form>
+						<input class="m_home_search" type="text" placeholder="请输入您要找耗材名称">
+						<input class="m_home_search_sibmit" type="submit" value="搜索">
+					</form>
+				</div>
+			</div>
+			<div class="hotSearch-top">
+				<div class="hotSearch">
+					<div class="hotSearchTit">
+						<span class="fl">搜索记录</span>
+						<span class="fr"><img src="Images/remove.png"/><i>删除</i></span>
+					</div>
+					<div class="hotSearchExample">
+						<a href="SearchAction.html">唇膏</a>
+						<a href="SearchAction.html">爽肤水</a>
+						<a href="SearchAction.html">美素</a>
+						<a href="SearchAction.html">爱他美</a>
+						<a href="SearchAction.html">karicare</a>
+						<a href="SearchAction.html">swisse</a>
+					</div>
+				</div>
+				<!--搜索无记录-->
+				<div class="hotSearch-title" style="display:none ;">无历史搜索记录</div>
+				<!--搜索无记录-->
+				<div class="hotSearch">
+					<div class="hotSearchTit">搜索历史</div>
+					<!--搜索无记录-->
+					<div class="hotSearchTit" style="display:none ;">热门搜索</div>
+					<!--搜索无记录-->
+					<div class="searHistory">
+						<a href="#">眼线</a>
+						<a href="#">爽肤水</a>
+						<a href="#">眼线</a>
+						<a href="#">保湿爽肤水</a>
+					</div>
+				</div>
+			</div>
+			<!--搜索时匹配开始-->
+			<div class="searHistory-title" style="display:none ;">
+				<ul>
+					<li>
+						<a href="#">花王</a>
+						<span class="fr">
+							<a href="#">花王</a>
+							<a href="#">花王</a>
+							<a href="#">花王</a>
+						</span>
+					</li>
+				</ul>
+
+			</div>
+			<!--搜索时匹配结束-->
+		</section>
+	</body>
+
+</html>

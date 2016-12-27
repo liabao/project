@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>修改支付密码</title>
+		<link rel="shortcut icon" href="../Images/logo.png" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/Password.css" />
+	</head>
+	<body class="header-body">
+		 <section class="common-wrapper">
+            <div class="Modify-content">
+              <form>
+              	 <div class="orInfo">
+              	 	<div class="newlogInp ">手机号<i>18612900720</i></div>
+              	 	<div class="newlogBox normalInput">
+              	 		<input type="password" id="Password" value="" placeholder="新设支付密码" class="oldPassword payPwd" maxlength="16" />
+              	 		<span class="error error4"></span>
+              	 	</div>
+              	 	<div class="newlogBox normalInput">
+              	 		<input type="password" id="newPassword" value="" placeholder="请再次输入支付密码" class="oldPassword payPwds"  maxlength="16" />
+              	 		<span class="error error5"></span>
+              	 	</div>
+              	 	 <div class="newlogBox normalInput">
+              	 		<input type="text" value="" placeholder="请输入手机验证码" class="oldPassword oldCode payCode"  maxlength="6"/>       
+              	 		<input type="button" onclick="countDown(this,60);" value="发送验证码" class="btnCode" id="btn"/>
+              	 		<span class="error error6"></span>
+              	 	</div>
+              	 	<div class="baseBtn" id="baseBtn">
+				        <a class="bgReda" onclick="EjectDiv('row_col_4|row_col', 'black', 'row_col')">确认修改</a>
+				    </div>
+              	 </div>
+              </form>
+            </div>
+		 </section>
+		 <!--弹出窗口网络开始-->
+		    <div class="black" id="row_col" onclick="HideDiv()"></div>
+		   	   <div class="network" id="row_col_4">
+		   	   	  <span class="fr close1" onclick="closeDiv('row_col|row_col_4')">
+		   	   	  	<img src="../Images/close.png" width="13px" height="13px">
+		   	   	 </span>
+		   	   	<div class="purchase">
+			   	   	 <p><img src="../Images/close1.png"></p>
+			   	   	 <p>修改成功，请牢记新密码</p>
+		   	   	 </div>
+		   	   </div>
+		<!--弹出窗口网络结束-->
+		 <script type="text/javascript" src="../js/jquery-1.10.2.min.js" ></script>
+		 <script type="text/javascript" src="../js/recharge.js" ></script>
+		 <script type="text/javascript" src="../js/PayPassword.js"></script>
+		 <script type="text/javascript">
+	    function countDown(obj, second) {
+	        // 如果秒数还是大于0，则表示倒计时还没结束
+	        if (second >= 0) {
+	            // 获取默认按钮上的文字
+	            if (typeof buttonDefaultValue === 'undefined') {
+	                buttonDefaultValue = obj.defaultValue;
+	            }
+	            // 按钮置为不可点击状态
+	            obj.disabled = true;
+	            document.getElementById('btn').style.background = '#d6d6d6'
+	
+	            // 按钮里的内容呈现倒计时状态
+	            obj.value = second + 'S';
+	            // 时间减一
+	            second--;
+	            // 一秒后重复执行
+	            setTimeout(function () { countDown(obj, second); }, 1000);
+	            // 否则，按钮重置为初始状态
+	        } else {
+	            // 按钮置未可点击状态
+	            obj.disabled = false;
+	            // 按钮里的内容恢复初始状态
+	            obj.value = buttonDefaultValue;
+	            document.getElementById('btn').style.background = '#67b1d6'
+	        }
+	    }
+	</script>
+	</body>
+</html>

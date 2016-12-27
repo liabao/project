@@ -1,0 +1,346 @@
+@charset "utf-8";
+/* 禁用iPhone中Safari的字号自动调整*/
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	font-size: 14px;
+}
+/* 去除iPhone中默认的input样式*/
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+/* input {
+    -webkit-appearance:none;
+    resize: none;
+    
+}*/
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+	cursor: pointer;
+-webkit-appearance: none;
+ resize: none;
+}
+/* 取消链接高亮*/
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	/*	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);*/
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+
+/* 设置HTML5元素为块*/
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+
+/* 图片自适应*/
+
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
+	/* ie8*/
+	-ms-interpolation-mode: bicubic;
+	/*为了照顾ie图片缩放失真*/
+	
+}
+
+body {
+	font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+	background: #f2f2f2;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);  /*去除移动端默认点击高亮*/
+    overflow-y: scroll;
+}
+
+em,
+i {
+	font-style: normal;
+}
+
+
+/* strong {
+    font-weight: normal;
+}*/
+
+.clearfix:after {
+	content: "";
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+a {
+	text-decoration: none;
+	color: #333333;
+	font-family: 'Adobe 黑体 Std R', Microsoft YaHei, Tahoma, Arial, sans-serif;
+}
+
+a:hover {
+	color: #333;
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-family: Microsoft YaHei;
+}
+img {
+	border: none;
+/*	vertical-align: middle;*/
+	/*vertical-align:bottom;*/
+}
+/*公用样式完毕*/
+.fl{float: left;}
+.fr{float: right;}
+.common-wrapper {
+	width: 100%;
+	/*max-width:750px;
+    min-width: 320px;*/
+	overflow: hidden;
+	margin: 0 auto;
+	height: auto;
+    padding-bottom: 50px;
+    position: relative;
+}
+.header-body{background: #fff;}
+.header-top{width: 100%; height: auto; overflow: hidden;   
+ position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+    }
+.b_foot {
+	background-color: #fff;
+	width: 100%;
+	clear: both;
+	border-top: 1px solid rgb(220, 220, 220);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 101;
+}
+
+.b_f_left {
+	float: left;
+	width: 25%;
+	font-size:0.93rem;
+	cursor: pointer;
+	text-align: center;
+}
+/*.b_f_left img {
+	width: 2.14rem;
+	height: 2.14rem;
+}*/
+
+.b_f_img {
+	height: 2.14rem;
+	width: 100%;
+	text-align: center;
+	padding-top: 5px;
+	margin: 0 auto;
+
+}
+
+.b_f_text_02 {
+	text-align: center;
+	color: #E23D59;
+}
+
+.height5 {
+	height: 5px;
+}
+
+.col_xs_12 {
+	float: left;
+	width: 100%;
+}
+
+span.b_f_text_02 {
+	text-align: center;
+	color: #9b9b9b;
+	display: block;
+	font-family: "宋体";
+	font-size: 12px;
+
+}
+
+.b_f_img#dataTypeImg1 {
+	background:url(../Images/17-icon-PCenter-gray.png)center center no-repeat;
+	background-size: 100%;
+	width:18px;
+}
+
+.b_f_img#dataTypeImg2 {
+	background:url(../Images/18-icon-PCenter-gray.png)center center no-repeat;
+	background-size: 100%;
+	width: 25px;
+}
+
+.b_f_img#dataTypeImg3 {
+	background:url(../Images/19-icon-PCenter-gray.png)center center no-repeat;
+	background-size: 100%;
+	width: 20px;
+}
+
+.b_f_img#dataTypeImg4 {
+	background:url(../Images/20-icon-PCenter-gray.png)center center no-repeat;
+	background-size: 100%;
+	width: 19px;
+}
+
+#activitdataTypeImg1 {
+	background:url(../Images/17-icon-PCenter.png)center center no-repeat;
+	width:18px;
+	background-size: 100%;
+}
+
+#activitdataTypeImg2 {
+	background:url(../Images/18-icon-PCenter.png)center center no-repeat;
+	width:25px;
+	background-size: 100%;
+}
+
+#activitdataTypeImg3  {
+	background: url(../Images/19-icon-PCenter.png)center center no-repeat;
+	width: 20px;
+	background-size: 100%;
+}
+
+#activitdataTypeImg4  {
+	background:url(../Images/20-icon-PCenter.png)center center no-repeat;
+	width: 19px;
+	background-size: 100%;
+}
+.b_f_img#dataTypeImg5 {
+	background:url(../Images/21-icon-PCenter-gray.png)center center no-repeat;
+	background-size: 100%;
+	width:18px;
+}
+
+.b_f_img#dataTypeImg6 {
+	background:url(../Images/22-icon-PCenter-gray.png)center center no-repeat;
+	background-size: 100%;
+	width: 23px;
+}
+
+.b_f_img#dataTypeImg7 {
+	background:url(../Images/25-icon-PCenter-gray.png)center center no-repeat;
+	background-size: 100%;
+	width: 20px;
+}
+
+.b_f_img#dataTypeImg8 {
+	background:url(../Images/23-icon-PCenter-gray.png)center center no-repeat;
+	background-size: 100%;
+	width: 19px;
+}
+
+#activitdataTypeImg5 {
+	background:url(../Images/21-icon-PCenter.png)center center no-repeat;
+	width:18px;
+	background-size: 100%;
+}
+
+#activitdataTypeImg6 {
+	background:url(../Images/22-icon-PCenter.png)center center no-repeat;
+	width:23px;
+	background-size: 100%;
+}
+
+#activitdataTypeImg7  {
+	background: url(../Images/25-icon-PCenter.png)center center no-repeat;
+	width: 20px;
+	background-size: 100%;
+}
+
+#activitdataTypeImg8  {
+	background:url(../Images/23-icon-PCenter.png)center center no-repeat;
+	width: 19px;
+	background-size: 100%;
+}
+.b_f_left.active .b_f_text_02 {
+	color: #6dc7cf;	font-family: "宋体";
+	font-size: 12px;
+}
+.fen {
+	color: #9b9b9b;
+}
+.my-top {
+    width: 2.86rem;
+    height: 2.86rem;
+    background:url(../Images/my-top.png) no-repeat;
+    z-index: 9999;
+    background-size: 100% 100%;
+    position: fixed;
+    right: 0.71rem;
+    bottom:7rem;
+    cursor: pointer;
+}

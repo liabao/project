@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>明细</title>
+		<link rel="shortcut icon" href="../Images/logo.png" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/pullToRefresh.css" />
+		<link rel="stylesheet" href="../css/Amount.css" />
+	</head>
+	<body class="header-body">
+		<section class="common-wrapper">
+			<div class="Detailed-content" id="wrapper">
+				<ul>
+					<li>
+						<a href="Detailedindex.html">
+							<p>
+								<span class="fl s8">账户提现</span>
+								<span class="fr number-right">-298</span>
+							</p>
+							<p>
+								<span class="fl Date s8">2016.02.22</span>
+								<span class="fr number-right1">审核中</span>
+							</p>
+						</a>
+					</li>
+					<li>
+						<a href="Detailedindex.html">
+							<p>
+								<span class="fl s8">账户提现</span>
+								<span class="fr number-right">-298</span>
+							</p>
+							<p>
+								<span class="fl Date s8">2016.02.22</span>
+								<span class="fr number-right1">已完成</span>
+							</p>
+						</a>
+					</li>
+					<li>
+						<a href="Detailedindex.html">
+							<p>
+								<span class="fl s8">账户提现</span>
+								<span class="fr number-right">-298</span>
+							</p>
+							<p>
+								<span class="fl Date s8">2016.02.22</span>
+								<span class="fr number-right1">退回</span>
+							</p>
+						</a>
+					</li>
+					<li>
+						<a href="Detailedindex.html">
+							<p>
+								<span class="fl s8">充值佣金</span>
+								<span class="fr number-right2">+298</span>
+							</p>
+							<p>
+								<span class="fl Date s8">2016.02.22</span>
+								<span class="fr number-right1">飞翔店铺</span>
+							</p>
+						</a>
+					</li>
+					<li>
+						<a href="Detailedindex.html">
+							<p>
+								<span class="fl s8">活动收款</span>
+								<span class="fr number-right2">+298</span>
+							</p>
+							<p>
+								<span class="fl Date s8">2016.02.22</span>
+								<span class="fr number-right1">飞翔店铺</span>
+							</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		 <script type="text/javascript" src="../js/jquery-1.10.2.min.js" ></script>
+		 <script type="text/javascript" src="../js/iscroll.js" ></script>
+		 <script type="text/javascript" src="../js/pullToRefresh.js" ></script>
+	     <script type="text/javascript" src="../js/DropdownPage.js" ></script>
+	     <!--下拉效果--> 
+		<script>
+           function ListLoadData() {
+           var str = "";
+                for (i = 0; i < 5; i++) {
+                      str +="<li><a href=''><p><span class='fl s8'>活动收款</span><span class='fr number-right2'>+298</span></p><p><span class='fl Date'>2016.02.22</span><span class='fr number-right1'>飞翔店铺</span></p></a></li>"
+                 }
+           return str;
+          }
+		</script>
+	</body>
+</html>

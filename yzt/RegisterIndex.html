@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>注册</title>
+		<link rel="shortcut icon" href="Images/logo.png" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/logo.css" />
+		<style>
+			.purchase {text-align: center; padding-top:10px;font-family: "宋体";}
+			.purchase p img { width: 49px;height: 49px;text-align: center;margin: 0 auto;display: block;}
+			.purchase p{padding-top: 10px;}
+		</style>
+	</head>
+	<body class="header-body">
+		<section class="common-wrapper">
+			<div class="logo"></div>
+			<p class="p-title3">一指淘</p>
+			<div class="upl clearfix">
+				<ul id="warp">
+					<li>
+						<input type="file" id="up_img_WU_FILE_0" class="warp-img">
+						<img src="Images/images11.png" id="imgShow_WU_FILE_0">
+						<p>*本照片将用来判断是否有在本平台购买耗材的权限</p>
+					</li>
+				</ul>
+				<div class="table_box-buttom" onclick="EjectDiv('row_col_3|row_col', 'black', 'row_col')"><a href="#">登录</a></div>
+			</div>			
+		</section>
+		<!---注册下一步开始-->
+			<div class="black" id="row_col" onclick="HideDiv()"></div>
+		    <div class="password-content1" id="row_col_3" style="height:170px ;">
+		    	<div class="purchase">
+			    	<p style="margin-top:0px ;"><img src="Images/close1.png"></p>
+			    	<p>上传成功，正在审核中</p>
+			    	<p class="fr p-shi"><span onclick="closeDiv('row_col|row_col_3')">确定</span></p>
+		    	</div>
+		   	</div>
+		<!--注册下一步结束--->
+		<!---注册下一步开始-->
+			<div class="black" id="row_col" onclick="HideDiv()"></div>
+		    <div class="password-content1 password-content2" id="row_col_4">
+		    	<p>您还未完成注册</p>
+		    	<p>上传成功，正在审核中</p>
+		    	<p class="fr p-shi">
+		    		<span onclick="closeDiv('row_col|row_col_4')">确定</span>
+		    		<span onclick="EjectDiv('row_col_5|row_col', 'black|row_col_4', 'row_col')">继续完善</span>
+		    	</p>
+		   	</div>
+		<!--注册下一步结束--->
+		<!--注册下一步-关闭理由开始--->
+		  <div class="password-content1 password-content3" id="row_col_5">
+                <div class="similar-content">
+                	<span>请告诉我们您退出的原因</span>
+                	<ul>
+                		<li>我不是美容院不需要注册
+                			<i class="fr icon-name1"><input name="aIsdefault" type="hidden" value="1"></i>
+
+                		</li>
+                		<li>不知道干什么的，试验了一下
+                			<i class="fr icon-name1"><input name="aIsdefault" type="hidden" value="1"></i>
+                		</li>
+                		<li>以后再注册
+                			<i class="fr icon-name1"><input name="aIsdefault" type="hidden" value="1"></i>
+                		</li>
+                		<li>其它原因
+                			<i class="fr icon-name1"><input name="aIsdefault" type="hidden" value="1"></i>
+                		</li>
+                	</ul>
+                </div>
+		    	<p class="fr p-shi"><span onclick="closeDiv('row_col|row_col_5')">取消</span><span onclick="closeDiv('row_col|row_col_5')">确定</span></p>
+		   	</div>
+		<!--注册下一步-关闭理由结束--->
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/uploadPreview.js" ></script>
+		<script type="text/javascript" src="js/logo.js"></script>
+		<script type="text/javascript" src="js/recharge.js"></script>
+	</body>
+
+</html>

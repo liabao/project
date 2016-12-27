@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>下线统计</title>
+		<link rel="shortcut icon" href="../Images/logo.png" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/offline.css" />
+	</head>
+	<body class="header-body">
+		<div class="offlin">
+			<div class="searchform">
+				<form class="searchform-top">
+					<span class="searchArr search-form-icon"></span>
+					<input class="m_home_search" type="text" placeholder="请输入下线手机号">
+					<input class="m_home_search_sibmit" type="submit" value="搜索">
+				</form>
+			</div>
+			<div class="mui-content">
+				<div id="slider" class="mui-slider mui-fullscreen">
+					<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+						<div class="offlin-conter mui-scroll">
+							<ul class="mui-table-view mui-table-view-chevron " id="list">
+								<li>
+									<p>
+										<span class="fl gray">飞翔小子店铺</span>
+										<span class="fr gray">下线15</span>
+									</p>
+									<p>
+										<span class="fl">18023501024</span>
+										<span class="fr">2016/05/19</span>
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.10.2.min.js" ></script>
+		<script type="text/javascript" src="../js/mui.min.js" ></script>
+		<script type="text/javascript">
+			mui.init({
+				pullRefresh: {
+					container: "#refreshContainer", //待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+					up: {
+						auto: false,
+						callback: pullupRefresh
+					},
+					down: {
+						callback: pulldownRefresh
+					}
+				}
+
+			});
+			//上拉加载更多
+			function pullupRefresh() {
+				loaded();
+				//是否还有更多数据；若还有更多数据，则传入false; 否则传入true，之后滚动条滚动到底时，将不再显示“上拉显示更多”的提示语，而显示“没有更多数据了”的提示语；
+				mui('#refreshContainer').pullRefresh().endPullupToRefresh(false);
+			}
+			//下拉刷新
+			function pulldownRefresh() {
+
+				loaded();
+				//注意，加载完新数据后，必须执行如下代码，注意：若为ajax请求，则需将如下代码放置在处理完ajax响应数据之后
+				mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+			}
+
+			function loaded() {
+				//下拉刷新显示成功效果
+			$("#list").append('<li>' +
+								'<p>'+
+								'<span class="fl gray">飞翔小子店铺</span>'+
+								'<span class="fr gray">下线15</span>'+
+								'</p>'+
+								'<p>'+
+								'<span class="fl">18023501024</span>'+
+								'<span class="fr">2016/05/19</span>'+
+								'</p>'+
+							'</li>');						
+			}
+			
+		</script>		
+	</body>
+
+</html>

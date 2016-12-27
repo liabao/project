@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>结算</title>
+		<link rel="shortcut icon" href="Images/logo.png" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/settlement.css" />
+	</head>
+	<body class="header-body">
+		<section class="common-wrapper">
+			<!--购物车-->
+			<div class="cartList">
+				<div class="goodCart">
+					<div class="goodimg">
+						<a href="#"><img src="Images/9614383.jpg"></a>
+					</div>
+					<div class="cart-product-cell">
+						<div class="cart-product-name">
+							<a href="javascript:;">
+								<span>老北京布鞋女鞋秋季单鞋韩版小白鞋女士松糕鞋厚底平底女鞋鞋子 C198052白色薄底 38</span>
+							</a>
+						</div>
+						<div class="shp-cart-item-price">
+							<span class="fl"><i>￥150</i></span>
+						</div>
+					</div>
+						<div class="addSub">
+							<p>拼购数量</p>
+							<p class="num">
+								<span class="btn minus-btn" onclick="min(this)">-</span>
+								<input name="order-count-input" class="order-count-input" type="tel" value="1">
+								<span class="btn plus-btn" onclick="add(this)">+</span>
+							</p>
+						</div>					
+				</div>
+				<!--收货地址开始-->
+				<div class="new-title">收货地址</div>
+				<div class="new-ship-addr">
+					<ul class="new-mu-p">
+						<li class="new-mu">
+							<p class="new-tit new-p-re">
+								<span data-default="receiver">林果果</span>
+								<span class="new-txt" data-default="mobile">18612900720</span>
+							</p>
+							<span class="new-mu_l new-p-re">
+		 		  	 			<p class="new-mu_2" data-default="address">广东深圳市福田区沙尾村平安公寓4B2</p>
+		 		  	 			<p class="new-txt-rd2"><a data-default="a" href="User/Address.html">编辑</a></p>
+		 		  	 		</span>
+						</li>		
+					</ul>
+					<ul class="new-mu-pl">
+		 		  	 	<li class="new-mu">
+		 		  	 		<p class="new-tit new-p-re">
+		 		  	 			<i><input name="aIsdefault" type="hidden" value="1"></i>
+		 		  	 			<span>林果果</span>
+		 		  	 			<span class="new-txt">18612900720</span>
+		 		  	 		</p>
+		 		  	 		<span class="new-mu_l new-p-re">
+		 		  	 			<p class="new-mu_2">广东深圳市福田区沙尾村平安公寓</p>
+		 		  	 			<p class="new-txt-rd2"><a href="User/AddAddress.html">编辑</a></p>
+		 		  	 		</span>
+		 		  	 	</li>
+		 		  	 	<li class="new-mu">
+		 		  	 		<p class="new-tit new-p-re">
+		 		  	 			<i><input name="aIsdefault" type="hidden" value="1"></i>
+		 		  	 			<span>林果果1</span>
+		 		  	 			<span class="new-txt">18612900720</span>
+		 		  	 		</p>
+		 		  	 		<span class="new-mu_l new-p-re">
+		 		  	 			<p class="new-mu_2">广东深圳市福田区沙尾村平安公寓4B2</p>
+		 		  	 			<p class="new-txt-rd2"><a href="User/AddAddress.html">编辑</a></p>
+		 		  	 		</span>
+		 		  	 	</li>	
+		 		  	 </ul>
+					<a href="User/Address.html" class="new-abtn-type">新增地址</a>
+					 <a class="new-abtn-type1" href="#">其它地址<i></i></a>
+				</div>
+			</div>
+			<!--收货地址结束-->
+			<div class="Amount">
+				<p class="fr Amountmoney">应付金额:<i style="color: #d66767;" id="allmoney">￥0</i></p><br />
+				<p class="fr Amountfreight">不含运费，运费到付</p>
+			</div>
+			<!-- 购物车结束-->
+			<div class="payment">
+				<ul>
+					<li class="grid">
+						<i><input name="aIsdefault" type="hidden" value="1"></i><em>余额支付</em>
+						<span class="fr">￥1</span>
+					</li>
+					<li class="grid">
+						<i><input name="aIsdefault" type="hidden" value="1"></i>
+						<img src="Images/28-icon-PCenter-gray.png" class="icon-computer1">
+						<em>微信支付	</em>		
+					</li>
+				</ul>
+				<a href="#" class="baseBtn" onclick="EjectDiv('row_col_6|row_col', 'black', 'row_col')">提交订单</a>
+			</div>
+		</section>
+		<!--支付密码-->
+		<div class="black" id="row_col" onclick="HideDiv()"></div>
+		<div class="Payment-password" id="row_col_6">
+			<span class="close" onclick="closeDiv('row_col|row_col_6')"><img src="Images/close.png" width="13px" height="13px"></span>
+			<p class="Balance-payment">余额支付<span>￥105</span></p>
+			<p>请输入支付密码</p>
+			<p><input type="password" placeholder="请输入支付密码" /></p>
+			<div class="Forget-password">忘记支付密码？</div>
+			<a href="#" class="bab-btn bab-btn1" onclick="closeDiv('row_col|row_col_6')">确定</a>
+
+		</div>
+		<!--支付密码-->
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/recharge.js"></script>
+		<script type="text/javascript" src="js/Settlement.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>反馈投诉</title>
+		<link rel="shortcut icon" href="../Images/logo.png" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/conner.css" />
+		<link rel="stylesheet" href="../css/Feedback.css" />
+	</head>
+	<body class="header-body">
+		<section class="common-wrapper">
+			<div class="feedback">
+				<div class="feedback-title">选择反馈类型</div>
+				<ul class="Complaint">
+					<li class="cur">
+						<i><input name="aIsdefault" type="hidden" value="1"></i>
+						<span>投诉</span>
+					</li>
+					<li>
+						<i></i>
+						<span>建议</span>
+					</li>
+					<li>
+						<i></i>
+						<span>吐槽</span>
+					</li>
+				</ul>
+				<div class="feedback-comtent">
+					<!--投诉开始-->
+					<div class="complaints">
+						<textarea rows="5" name="content" class="complaints-textarea" placeholder="请输入详细内容"></textarea>
+						<ul id="warp">
+							<li>
+								<input type="file" onchange="fileChange(this)" class="warp-img">
+								<img src="../Images/images14.png">
+								<span class="del cIcon" style="display:none" onclick="clearFile(this)"></span>
+							</li>
+
+						</ul>
+						<a href="FeedbackIndex.html" class="baseBtn" onclick="EjectDiv('row_col_6|row_col', 'black', 'row_col')">提交申请</a>
+					</div>
+					<!--投诉结束 -->
+				</div>
+			</div>
+		  <!--弹出窗口网络开始-->
+		    <div class="black" id="row_col" onclick="HideDiv()"></div>
+		   	   <div class="network" id="row_col_6">
+		   	   	  <span class="fr close1" onclick="closeDiv('row_col|row_col_6')">
+		   	   	  	<img src="../Images/close.png" width="13px" height="13px">
+		   	   	 </span>
+		   	   	<div class="purchase">
+			   	   	 <p><img src="../Images/close1.png"></p>
+			   	   	 <p>提交成功，感谢你的反馈</p>
+		   	   	 </div>
+		   	   </div>
+		<!--弹出窗口网络结束-->
+		<!--空白页面-->
+		  <div class="content" style="display:none ;">
+				<img src="../Images/images5.png" width="242px" height="99px">
+				<p>您暂无任何反馈信息</p>
+				<a href="#" class="cont-btn">提一条</a>
+			</div>
+		</section>
+		<script type="text/javascript" src="../js/jquery-1.7.2.min.js" ></script>
+		<script type="text/javascript" src="../js/LaunchFight.js" ></script>
+		<script type="text/javascript" src="../js/recharge.js" ></script>
+	</body>
+
+</html>
