@@ -36,3 +36,11 @@ $(function() {
 	})
 })
 
+$(function(){
+	$('.new-tit i').click(function(){
+		$(this).toggleClass("cur").parents().siblings().children().find("i").removeClass("cur");
+		$("[data-default='receiver']").text($(this).parent().find("span").eq(0).text());
+		$("[data-default='mobile']").text($(this).parent().find("span").eq(1).text());
+		$("[data-default='a']").attr("href",$(this).parent().parent().find("span").find("p").eq(1).find("a").attr("href"));
+	})
+})

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
@@ -19,7 +18,7 @@
 				<div class="searchform">
 					<form>
 						<input class="m_home_search" type="text" placeholder="请输入您要找耗材名称">
-						<input class="m_home_search_sibmit" type="submit" value="搜索">
+						<input class="m_home_search_sibmit" type="button" value="搜索">
 					</form>
 				</div>
 			</div>
@@ -27,15 +26,10 @@
 				<div class="hotSearch">
 					<div class="hotSearchTit">
 						<span class="fl">搜索记录</span>
-						<span class="fr"><img src="Images/remove.png"/><i>删除</i></span>
+						<span class="fr" id="deldate"><img src="Images/remove.png"/><i>删除</i></span>
 					</div>
 					<div class="hotSearchExample">
-						<a href="SearchAction.html">唇膏</a>
-						<a href="SearchAction.html">爽肤水</a>
-						<a href="SearchAction.html">美素</a>
-						<a href="SearchAction.html">爱他美</a>
-						<a href="SearchAction.html">karicare</a>
-						<a href="SearchAction.html">swisse</a>
+
 					</div>
 				</div>
 				<!--搜索无记录-->
@@ -70,6 +64,57 @@
 			</div>
 			<!--搜索时匹配结束-->
 		</section>
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/cookiesUtility.js"></script>
+		<script>
+		$(function() {
+				var cookieVal = cookiesUtility.getCookies("serach");//取cookie值
+				//不等为空
+			if(cookieVal != "") {
+					var valSplice = cookiesUtility.getCookies("serach").split(',..');
+					$(".hotSearchExample a").remove();
+					for(var i in valSplice) {
+						$(".hotSearchExample").append('<a href="#">' + valSplice[i] + '</a>');
+					}
+				}
+		})
+		//搜索取到的值
+			$(".m_home_search_sibmit").click(function() {
+				var searchVal = $(".m_home_search").val();
+				//不能为空的情况下
+				if(searchVal != "") {
+					var cookieVal = cookiesUtility.getCookies("serach");
+				$(".hotSearchExample a").remove();
+					var b = false;
+				if(cookieVal == "" || cookieVal==undefined) {
+						cookiesUtility.setCookies("serach", searchVal, {
+							hour: 8760
+						});
+				} else {					
+						var valSplice = cookiesUtility.getCookies("serach").split(',..');
+						for(var i in valSplice) {
+							if(searchVal == valSplice[i]) {
+								b= true;
+							}
+							$(".hotSearchExample").append('<a href="#">' + valSplice[i] + '</a>');
+						}						
+						if(!b) {
+							cookiesUtility.setCookies("serach", searchVal + ",.." + cookieVal, {
+								hour: 8760
+							});
+							$(".hotSearchExample").prepend('<a href="#">' + searchVal + '</a>');
+					}
+					}
+				}
+
+			});
+			//删除cookies
+			$("#deldate").click(function(){
+				$(".hotSearchExample a").remove();
+				cookiesUtility.deleteCookies("serach");
+		})
+
+		</script>
 	</body>
 
 </html>

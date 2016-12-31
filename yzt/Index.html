@@ -12,8 +12,80 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/index.css" />
 		<link rel="stylesheet" href="css/swiper.min.css" />
+		<style>
+			.num-title-bg {
+				height: 28px;
+				font-size: 14px;
+				border-bottom: 1px solid #6DC7CF;
+				border-top: 1px solid #6DC7CF;
+			}
+			
+			.num-title-bg input {
+				width: 22%;
+				height: 28px;
+				line-height: 28px;
+				border: none;
+				border-radius: inherit;
+				padding: 0px 10px;
+				border-top: none;
+				border-bottom: none;
+			}
+			
+			.plus-btn1 {
+				border-top: none;
+				border-bottom: none;
+				line-height: 25px;
+			}
+			
+			.minus-btn1 {
+				border-bottom: none;
+				border-left: 1px solid #6dc7cf;
+				border-top: none;
+			}
+			
+			.warp-list li {
+				width: 50%;
+				margin: 0px;
+				background: none;
+			}
+			
+			.similar-li:nth-child(2n) {
+				padding-left: 1px;
+			}
+			
+			.similar-li:nth-child(2n+1) {
+				padding-right: 1px;
+			}
+			
+			.similar-li {
+				float: left;
+				width: 50%;
+				box-sizing: border-box;
+				position: relative;
+				padding-top: 3px;
+			}
+			
+			.similar-li:nth-of-type(1) {
+				padding-top: 2px;
+			}
+			
+			.similar-li:nth-of-type(2) {
+				padding-top: 2px;
+			}
+			
+			.mainTit {
+				margin-top: 0px;
+			}
+			
+			.similar-product {
+				background: #fff;
+			}
+			
+			.showList-li {
+				border-bottom: 2px solid #F2F2F2;
+			}
+		</style>
 	</head>
-
 	<body class="header-body">
 		<section class="header-concenter">
 			<!--头部开始-->
@@ -91,104 +163,109 @@
 						<span class="fl"><img src="Images/icon-title.png"></span>
 						<a href="TodayIndex.html" class="fr a1">更多</a>
 					</div>
-					<ul class="warp-list">
-						<li>
-							<a href="User/ProductDetails.html">
-								<div class="similar-product">
-									<div class="product-img">
-										<img src="Images/430dc1f.gif">
-									</div>
-									<!--<div class="similar-product-text3">
-		   	  				     <p>平台精品推荐</p>
-		   	  				     <p></p>
-		   	  				     <p>商品卖点商品卖点商品卖点商品卖点</p>
-		   	  			     </div>-->
-									<div class="similar-product-text">
-										<span class="similar-product-title">商品标题商品标题商品标题商品标题商</span>
-										<p class="p2">
-											<span class="s3">￥6600.00</span>
-										</p>
-										<p class="similar-product-text7">
-											<del>￥100</del>
-											<span class="fr">剩余120件</span>
-										</p>
-									</div>
+					<ul class="warp-list" style="background:#EFEFF4 ;">
+						<li class="similar-li">
+							<div class="similar-product">
+								<div class="product-img">
+									<a href="#"><img src="Images/9af5f5d.jpg"></a>
 								</div>
-							</a>
+								<div class="similar-product-text">
+									<p class="similar-product-title4">
+										<a href="#">商品标题商品标题商品标题商品标题商</a>
+									</p>
+									<p class="s8">￥100</p>
+									<p class="similar-product-text7">
+										<del>￥100</del>
+										<span class="fr">剩余120件</span>
+									</p>
+								</div>
+								<div class="similar-product-bg">
+									<p class="num-title-bg">
+										<span class="minus-btn1" onclick="min(this)">-</span>
+										<input name="order-count-input" class="order-count-input1" type="tel" value="1">
+										<span class="plus-btn1" onclick="add(this)">+</span>
+									</p>
+									<span class="fr car-btn2" id="btnCart" onclick="EjectDiv('row_col_1|row_col', 'black', 'row_col')">加入采购单</span>
+								</div>
+							</div>
 						</li>
-						<li>
-							<a href="User/ProductDetails.html">
-								<div class="similar-product">
-									<div class="product-img">
-										<img src="Images/430dc1f.gif">
-									</div>
-									<!--<div class="similar-product-text3">
-		   	  				     <p>平台精品推荐</p>
-		   	  				     <p></p>
-		   	  				     <p>商品卖点商品卖点商品卖点商品卖点</p>
-		   	  			     </div>-->
-									<div class="similar-product-text">
-										<span class="similar-product-title">商品标题商品标题商品标题商品标题商</span>
-										<p class="p2">
-											<span class="s3">￥6600.00</span>
-										</p>
-										<p class="similar-product-text7">
-											<del>￥100</del>
-											<span class="fr">剩余120件</span>
-										</p>
-									</div>
+						<li class="similar-li">
+							<div class="similar-product">
+								<div class="product-img">
+									<a href="#"><img src="Images/9af5f5d.jpg"></a>
 								</div>
-							</a>
+								<div class="similar-product-text">
+									<p class="similar-product-title4">
+										<a href="#">商品标题商品标题商品标题商品标题商</a>
+									</p>
+									<p class="s8">￥100</p>
+									<p class="similar-product-text7">
+										<del>￥100</del>
+										<span class="fr">剩余120件</span>
+									</p>
+								</div>
+								<div class="similar-product-bg">
+									<p class="num-title-bg">
+										<span class="minus-btn1" onclick="min(this)">-</span>
+										<input name="order-count-input" class="order-count-input1" type="tel" value="1">
+										<span class="plus-btn1" onclick="add(this)">+</span>
+									</p>
+									<span class="fr car-btn2" onclick="EjectDiv('row_col_1|row_col', 'black', 'row_col')">加入采购单</span>
+								</div>
+							</div>
 						</li>
-						<li>
-							<a href="User/ProductDetails.html">
-								<div class="similar-product">
-									<div class="product-img">
-										<img src="Images/430dc1f.gif">
-									</div>
-									<!--<div class="similar-product-text3">
-		   	  				     <p>平台精品推荐</p>
-		   	  				     <p></p>
-		   	  				     <p>商品卖点商品卖点商品卖点商品卖点</p>
-		   	  			     </div>-->
-									<div class="similar-product-text">
-										<span class="similar-product-title">商品标题商品标题商品标题商品标题商</span>
-										<p class="p2">
-											<span class="s3">￥6600.00</span>
-										</p>
-										<p class="similar-product-text7">
-											<del>￥100</del>
-											<span class="fr">剩余120件</span>
-										</p>
-									</div>
+						<li class="similar-li">
+							<div class="similar-product">
+								<div class="product-img">
+									<a href="#"><img src="Images/9af5f5d.jpg"></a>
 								</div>
-							</a>
+								<div class="similar-product-text">
+									<p class="similar-product-title4">
+										<a href="#">商品标题商品标题商品标题商品标题商</a>
+									</p>
+									<p class="s8">￥100</p>
+									<p class="similar-product-text7">
+										<del>￥100</del>
+										<span class="fr">剩余120件</span>
+									</p>
+								</div>
+								<div class="similar-product-bg">
+									<p class="num-title-bg">
+										<span class="minus-btn1" onclick="min(this)">-</span>
+										<input name="order-count-input" class="order-count-input1" type="tel" value="1">
+										<span class="plus-btn1" onclick="add(this)">+</span>
+									</p>
+									<span class="fr car-btn2" onclick="EjectDiv('row_col_1|row_col', 'black', 'row_col')">加入采购单</span>
+								</div>
+							</div>
 						</li>
-						<li>
-							<a href="User/ProductDetails.html">
-								<div class="similar-product">
-									<div class="product-img">
-										<img src="Images/430dc1f.gif">
-									</div>
-									<!--<div class="similar-product-text3">
-		   	  				     <p>平台精品推荐</p>
-		   	  				     <p></p>
-		   	  				     <p>商品卖点商品卖点商品卖点商品卖点</p>
-		   	  			     </div>-->
-									<div class="similar-product-text">
-										<span class="similar-product-title">商品标题商品标题商品标题商品标题商</span>
-										<p class="p2">
-											<span class="s3">￥6600.00</span>
-										</p>
-										<p class="similar-product-text7">
-											<del>￥100</del>
-											<span class="fr">剩余120件</span>
-										</p>
-									</div>
+						<li class="similar-li">
+							<div class="similar-product">
+								<div class="product-img">
+									<a href="#"><img src="Images/9af5f5d.jpg"></a>
 								</div>
-							</a>
+								<div class="similar-product-text">
+									<p class="similar-product-title4">
+										<a href="#">商品标题商品标题商品标题商品标题商</a>
+									</p>
+									<p class="s8">￥100</p>
+									<p class="similar-product-text7">
+										<del>￥100</del>
+										<span class="fr">剩余120件</span>
+									</p>
+								</div>
+								<div class="similar-product-bg">
+									<p class="num-title-bg">
+										<span class="minus-btn1" onclick="min(this)">-</span>
+										<input name="order-count-input" class="order-count-input1" type="tel" value="1">
+										<span class="plus-btn1" onclick="add(this)">+</span>
+									</p>
+									<span class="fr car-btn2" onclick="EjectDiv('row_col_1|row_col', 'black', 'row_col')">加入采购单</span>
+								</div>
+							</div>
 						</li>
 					</ul>
+
 				</div>
 				<div class="header-hight"></div>
 				<!--限时抢购-->
@@ -197,9 +274,9 @@
 						<span class="fl"><img src="Images/icon-title1.png"></span>
 						<a href="FlashSale.html" class="fr a1">更多</a>
 					</div>
-					<ul class="showList" id="timeDate">
-						<li>
-							<input type="hidden" value="2016-12-12 23:40:00" />
+					<ul class="showList" id="timeShow">
+						<li class="showList-li">
+							<input type="hidden" value="2016-12-14 18:00:00" />
 							<a href="User/ProductDetails.html">
 								<div class="similar-product">
 									<div class="similar-product-tite-img"><img src="Images/banner-images1.png"></div>
@@ -221,8 +298,8 @@
 								</div>
 							</a>
 						</li>
-						<li>
-							<input type="hidden" value="2016-12-12 23:40:00" />
+						<li class="showList-li">
+							<input type="hidden" value="2016-12-13 17:15:36" />
 							<a href="User/ProductDetails.html">
 								<div class="similar-product">
 									<div class="similar-product-tite-img"><img src="Images/banner-images1.png"></div>
@@ -244,8 +321,8 @@
 								</div>
 							</a>
 						</li>
-						<li>
-							<input type="hidden" value="2016-12-07 23:40:00" />
+						<li class="showList-li">
+							<input type="hidden" value="2016-12-15 06:15:36" />
 							<a href="User/ProductDetails.html">
 								<div class="similar-product">
 									<div class="similar-product-tite-img"><img src="Images/banner-images1.png"></div>
@@ -267,11 +344,11 @@
 								</div>
 							</a>
 						</li>
-						<li>
-							<input type="hidden" value="2016-12-09 23:40:00" />
+						<li class="showList-li">
+							<input type="hidden" value="2016-12-16 06:15:36" />
 							<a href="User/ProductDetails.html">
 								<div class="similar-product">
-									<div class="similar-product-tite-img"><img src="Images/banner-images1.png"></div>
+									<div class="similar-product-tite-img"><img src="Images/59c08f1.jpg"></div>
 									<div class="similar-product-text10 similar-product-text3">
 										<p>平台精品推荐</p>
 										<p></p>
@@ -301,11 +378,12 @@
 						<img src="Images/banner-images3.png">
 					</a>
 				</div>
-
+                <div style="height:20px ;"></div>
 				<!--拼购-->
 				<div class="floor">
-					<ul class="showList showList-pl">
-						<li>
+					<ul class="showList showList-pl" id="timeShow1">			
+						<li class="showList-li">
+							<input type="hidden" value="2016-12-15 18:00:00" />
 							<a href="User/detail.html">
 								<div class="similar-product1">
 									<div class="product1-img"><img src="Images/images3.png"></div>
@@ -322,14 +400,15 @@
 									</span>
 									<span class="s5">咨询中</span>
 								</p>
-								<p class="p5">
+								<div class="p5 similar-product-text1">
 									<span class="s4 money fl">￥68</span>
-									<span class="Surplus">剩余10天</span>
+									<span class="Surplus">剩余1天</span>
 									<span class="fr car-btn" onclick="window.location.href='Settlement.html'">参加拼购</span>
-								</p>
+								</div>
 							</div>
 						</li>
-						<li>
+						<li class="showList-li">
+							<input type="hidden" value="2016-12-20 06:15:36" />
 							<a href="User/detail.html">
 								<div class="similar-product1">
 									<div class="product1-img"><img src="Images/images3.png"></div>
@@ -375,7 +454,7 @@
 				<div class="b_f_left " onclick="window.location.href='Jcart.html'">
 					<div class="b_f_img" id="dataTypeImg3">
 					</div>
-					<span class="b_f_text_02">进货单</span>
+					<span class="b_f_text_02" id="shopCart">进货单</span>
 				</div>
 				<div class="b_f_left" onclick="window.location.href='User/UserIndex.html'">
 					<div class="b_f_img" id="dataTypeImg4">
@@ -388,6 +467,7 @@
 
 		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="js/UserIndex.js"></script>
+		<script type="text/javascript" src="js/recharge.js" ></script>
 		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 		<script language="javascript">
 			var mySwiper = new Swiper('.swiper-container', {
@@ -396,47 +476,53 @@
 			})
 		</script>
 		<script>
-			var timeArray = new Array();
+			var timeArray = new Array();		
 			checkTime();
-			var time = setInterval('checkTime()', 1000);
+		    var time = setInterval('checkTime()', 1000);
 			function checkTime() {
-				$("#timeDate").find("li").each(function() {
-					var str = "剩余";
+				$("#timeShow,#timeShow1").find("li").each(function() {				
 					var date3 = 0;
-					var endTime = $(this).find("input").eq(0).val();
+					var endTime = $(this).find("input").eq(0).val();					
 					var date1 = new Date(); //开始时间
-					var date2 = new Date(endTime); //结束时间
-					date3 = date2.getTime() - date1.getTime(); //时间差的毫秒数
+					var date2 = new Date(endTime); //结束时间				
+					date3 = date2.getTime() - date1.getTime(); //时间差的毫秒数		
+					var str="剩余";
 					//计算出相差天数
 					var days = Math.floor(date3 / (24 * 3600 * 1000));
-					if(days > 0) {
-						str = "剩余" + days + "天";
+					if(days>0)  //判断最大值 
+					{
+						str="剩余"+days+"天";
 					}
 					//计算出小时数
 					var leave1 = date3 % (24 * 3600 * 1000); //计算天数后剩余的毫秒数
 					var hours = Math.floor(leave1 / (3600 * 1000));
-					if(hours > 0 && days <= 0) {
-						str = "剩余" + hours + "小时";
+					if(hours>0 && days<=0)
+					{
+						str="剩余"+hours+"小时";
 					}
 					//计算相差分钟数
-					var leave2 = leave1 % (3600 * 1000) //计算小时数后剩余的毫秒数
+					var leave2 = leave1 % (3600 * 1000); //计算小时数后剩余的毫秒数
 					var minutes = Math.floor(leave2 / (60 * 1000));
-					if(minutes > 0 && hours <= 0 && days <= 0) {
-						str = "剩余" + minutes + "分钟";
+					if(minutes>0 && hours<=0 && days<=0)
+					{
+						str="剩余"+minutes+"分钟";
 					}
 					//计算相差秒数
-					var leave3 = leave2 % (60 * 1000) //计算分钟数后剩余的毫秒数
+					var leave3 = leave2 % (60 * 1000); //计算分钟数后剩余的毫秒数
 					var seconds = Math.round(leave3 / 1000);
-					if(seconds > 0 && minutes <= 0 && hours <= 0 && days <= 0) {
-						str = "剩余" + seconds + "秒";
+					if(seconds>0 && minutes<=0 && hours<=0 && days<=0)
+					{
+						str="剩余"+seconds+"秒";
+					}					
+					if(date3<0)
+					{
+						str="活动结束";
 					}
-					if(date3 < 0) {
-						str = "活动结束"
-					}
-					$(this).find(".similar-product-text1").find("span").eq(1).text(str);
-				})
+					$(this).find(".similar-product-text1,.p5").find("span").eq(1).text(str);
+				});
 			}
 		</script>
+
 	</body>
 
 </html>

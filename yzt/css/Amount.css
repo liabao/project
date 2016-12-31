@@ -127,7 +127,7 @@ border-radius: 4px; overflow: hidden; color: #fff; font-size: 18px; line-height:
     height: 44px;
     line-height:30px;
 }
-.address-foot{width: 100%; height: auto; overflow: hidden;margin-top:15px ;}
+.address-foot{width: 100%; height: auto; overflow: hidden;margin-top:15px ;margin-left: 8px;}
 .address-foot i{width: 19px;height: 19px; background:url(../Images/checkedOff02.png) no-repeat ;
 background-size:100% ; display: block; float: left;margin-left:10px ;}
 .address-foot i.cur{ background:url(../Images/checkedOn02.png) no-repeat ;

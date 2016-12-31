@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=3, minimum-scale=1, user-scalable=no">
@@ -12,22 +13,29 @@
 		<link rel="stylesheet" href="css/mui.min.css" />
 		<link rel="stylesheet" href="css/index.css" />
 		<style>
-			.mui-content {background: #FFF;}
-			.mui-table-view {margin-top: -20px;}
+			.mui-content {
+				background: #FFF;
+			}
+			
+			.mui-table-view {
+				margin-top: -20px;
+			}
 		</style>
 	</head>
+
 	<body class="header-body">
 		<section class="common-wrapper">
 			<div class="mui-content">
 				<div id="slider" class="mui-slider mui-fullscreen">
 					<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
-						<div class="floor warp-hot mui-scroll">
+						<div class="floor warp-hot mui-scroll" id="timeShow1">
 							<ul class="mui-table-view mui-table-view-chevron showList showList-pl" id="list">
 								<li>
+									<input type="hidden" value="2016-12-8 14:00:00" />
 									<a href="user/Detail.html" data-a="a">
 										<div class="similar-product1">
 											<div class="product1-img"><img src="Images/images3.png"></div>
-											<div class="product2-img"><img src="Images/9614383.jpg"></div>
+											<div class="product2-img"><img src="Images/banner-images3.png"></div>
 										</div>
 										<div class="similar-product-text2">
 											<p class="p3">商品标题商品标题商品标题商品标题商品标题商</p>
@@ -49,11 +57,12 @@
 										</div>
 									</a>
 								</li>
-															<li>
+								<li>
+									<input type="hidden" value="2016-12-8 14:00:00" />
 									<a href="user/Detail.html" data-a="a">
 										<div class="similar-product1">
 											<div class="product1-img"><img src="Images/images3.png"></div>
-											<div class="product2-img"><img src="Images/9614383.jpg"></div>
+											<div class="product2-img"><img src="Images/banner-images3.png"></div>
 										</div>
 										<div class="similar-product-text2">
 											<p class="p3">商品标题商品标题商品标题商品标题商品标题商</p>
@@ -83,7 +92,6 @@
 		</section>
 		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="js/mui.min.js"></script>
-
 		<script type="text/javascript">
 			mui.init({
 				pullRefresh: {
@@ -127,10 +135,10 @@
 				//下拉刷新显示成功效果
 				$("#list").append('<li>' +
 					'<a href="#">' +
-					'<div class="similar-product1">'+					    				
-			   	  		'<div class="product1-img"><img src="Images/images3.png"></div>'+
-			   	  		'<div class="product2-img"><img src="Images/banner-images3.png"></div>'+
-		   	  		  '</div>' +
+					'<div class="similar-product1">' +
+					'<div class="product1-img"><img src="Images/images3.png"></div>' +
+					'<div class="product2-img"><img src="Images/banner-images3.png"></div>' +
+					'</div>' +
 					'<div class="similar-product-text2">' +
 					'<p class="p3">商品标题商品标题商品标题商品标题商品标题商</p>' +
 					'<p class="number">489</p>' +
@@ -149,6 +157,52 @@
 					'</div>' +
 					'</a>' +
 					'</li>');
+			}
+		</script>
+		<script type="text/javascript">
+			var timeArray = new Array();
+			checkTime();
+			var time = setInterval('checkTime()',1000);
+			function checkTime(){
+				$("#timeShow1").find("li").each(function(){
+					var date3= 0;
+					var endTime =$(this).find("input").eq(0).val();
+					var date1= new Date();//开始时间
+					var date2 = new Date(endTime);//结束时间
+					var date3 = date2.getTime() - date1.getTime();
+				var str="剩余";
+		     		//计算出相差天数
+		     		var days = Math.floor(date3 /(24 * 3600 * 1000));
+		     		if(days>0){
+		     			str=+days+"天";
+		     		}
+		     		//计算出小时数
+		     		var leave1 = date3 % (24 * 3600 *1000);//计算天数后剩余的毫秒数
+		     		var hours = Math.floor(leave1 / (3600 * 1000));
+		     		if(hours>0 && days<=0)
+		     		{
+		     			str=+hours+"小时";
+		     		}
+		     		//计算相差分钟数
+		     		var leave2 = leave1 % (3600 * 1000);//计算小时数后剩余的毫秒数
+		     		var minutes = Math.floor(leave2 / (60 * 1000));
+		     		if(minutes>0 && hours<=0 && days<=0)
+		     		{
+		     			str=+minutes+"分钟";
+		     		}
+		     		//计算相差秒数
+		     		var leave3 = leave2 % (60 * 1000);//计算分钟数后剩余的毫秒数
+		     		var seconds = Math.round(leave3 / 1000);
+		     		if(seconds>0 && minutes<=0 && hours<=0 && days<=0)
+		     		{
+		     			str=+seconds+"秒"
+		     		}
+		     		if(date3<0){
+		     			str="活动结束";
+		     		}
+		     		$(this).find(".p5").find("span").eq(1).text(str);
+					
+				})
 			}
 		</script>
 

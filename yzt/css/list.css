@@ -12,7 +12,7 @@
 	}
 }
 
-@media screen and (max-width: 3000px) and (min-width: 640px) {
+@media screen and (max-width: 3000px) and (min-width: 768px) {
 	.p-search-box .p-search {
 		width: 79%;
 	}
@@ -149,10 +149,9 @@
 
 .p-content .p-conleft {
 	width: 28%;
-	float: left;	
-	background: #F1F1F1;   
-border-right: #9b9b9b solid 1px;
-
+	float: left;
+	background: #F1F1F1;
+	border-right: #9b9b9b solid 1px;
 }
 
 .classify-title li {
@@ -208,9 +207,10 @@ border-right: #9b9b9b solid 1px;
 .p-two-title p {
 	font-size: 18px;
 	width: 100%;
-	padding: 8px 0;
+/*	padding: 8px 0;*/
 	font-family: "Adobe 黑体 Std R";
 	overflow: hidden;
+	color: #333;margin-top: 10px;
 }
 
 .p-three-title {
@@ -224,37 +224,39 @@ border-right: #9b9b9b solid 1px;
 	text-align: center;
 	padding-bottom: 12px;
 	line-height: 15px;
+	    display: inline-flex;
 }
 
 .p-three-title li p {
 	border: #E4E4E4 solid 1px;
-	width:62px;
+	width: 62px;
 	margin-left: 10%;
 	margin-bottom: 5px;
-	border-radius: 4px;
-	height: 50px;
+	border-radius: 4px;text-align: center;
+	height: 50px;     display:table-cell;
 }
 
 .p-three-title li p img {
-	width:50px;
+	width:100%;
 	margin-left: 10%;
 	margin-bottom: 5px;
 	border-radius: 4px;
 	text-align: center;
 	margin: 0 auto;
-	height:100%;
+	height: 1x00%;
 }
 
 .p-three-title li span {
 	color: #5d5d5d;
 	font-family: "Adobe 黑体 Std R";
-	height: 20px;
-	line-height: 18px;
+	height: 25px;
+	line-height:25px;
 	overflow: hidden;
 	word-break: break-word;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-	display: block;
+	display: list-item;
+	font-size: 16px;
 }
 
 .p-three-title li:nth-child(3n+1) {
@@ -300,4 +302,67 @@ border-right: #9b9b9b solid 1px;
 	background: url(../images/search.png) 0 -118px;
 	vertical-align: middle;
 	margin: 0 0 0 10px;
+}
+
+
+/*.overtouch{
+	overflow-y: auto;
+	
+	
+}*/
+
+.mui-segmented-control.mui-segmented-control-inverted.mui-segmented-control-vertical .mui-control-item,
+.mui-segmented-control.mui-segmented-control-inverted.mui-segmented-control-vertical .mui-control-item.mui-active {
+	border-bottom: #9b9b9b solid 1px;
+	border-top: #fff solid 1px;    border-right: #9b9b9b solid 1px;
+}
+
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+	color: #6DC7CF;
+	border-left: 2px solid #6DC7CF;
+	background: 0 0;
+	font-family: "Adobe 黑体 Std R";
+	font-size: 18px;
+}
+
+.mui-plus.mui-android header.mui-bar {
+	display: none;
+}
+
+.mui-plus.mui-android .mui-bar-nav~.mui-content {
+	padding: 0;
+}
+
+.mui-row.mui-fullscreen>[class*="mui-col-"] {
+	height: 100%;
+}
+
+.mui-col-xs-3,
+.mui-control-content {
+	overflow-y: auto;
+	height: 100%;
+}
+
+.mui-segmented-control .mui-control-item {
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	color: #333;
+	border-bottom: #9b9b9b solid 1px;
+	width: 100%;	font-family: "Adobe 黑体 Std R";
+	font-size: 18px;
+}
+
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+	background-color: #fff;
+}
+.mui-segmented-control.mui-segmented-control-inverted {
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    background: #F1F1F1;
+}
+
+#segmentedControls>:first-child{
+	border-right: 0px #fff;
 }

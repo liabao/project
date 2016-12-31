@@ -71,15 +71,15 @@
 }
 
 #pwdBtn {
-	margin: 19px 0px 0px -40px;
+	margin: 19px 0px 0px -56px;
 }
 
 .pwdBtnShow {
 	outline: none;
 	position: relative;
 	display: inline-block;
-	width: 30px;
-	height: 30px;
+	width:50px;
+	height:50px;
 	cursor: pointer;
 	overflow: hidden;
 	float: right;
@@ -87,9 +87,10 @@
 }
 
 .pwdBtnShow i {
-	background-position: -30px -93px;
+	    background-position: 13px 9px;
 	background-repeat: no-repeat;
-	background-image: url(../Images/shp-cart-icon-sprites.png);
+	background-image: url(../Images/shop.png);
+	background-size:20px ;
 }
 
 .i_icon {

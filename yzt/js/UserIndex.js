@@ -1,6 +1,6 @@
 //底部导航
 $('.b_f_left').click(function() {
-	$(this).addClass('active').siblings().removeClass('active');
+//	$(this).addClass('active').siblings().removeClass('active');
 });
 /*小箭头*/
 $(function(){

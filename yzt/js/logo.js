@@ -3,13 +3,13 @@ $(function() {
 	//密码是否可见(mainform1)
 	$(".pwdBtnShow").click(function() {
 		if($(".pwdBtnShow").attr("isshow") == "false") {
-			$(".pwdBtnShow i").css("background-position", "-60px -93px");
+			$(".pwdBtnShow i").css("background-position", "13px 9px");
 			$(".password").hide();
 			$(".password1").val($(".password").val());
 			$(".password1").show();
 			$(".pwdBtnShow").attr("isshow", "true");
 		} else {
-			$(".pwdBtnShow i").css("background-position", "-30px -93px");
+			$(".pwdBtnShow i").css("background-position", "13px 9px");
 			$(".password1").hide();
 			$(".password").val($(".password1").val());
 			$(".password").show();
@@ -22,13 +22,13 @@ $(function() {
 	//密码是否可见(mainform2)
 	$(".pwdBtnShowN").click(function() {
 		if($(".pwdBtnShowN").attr("isshow") == "false") {
-			$(".pwdBtnShowN i").css("background-position", "-60px -93px");
+			$(".pwdBtnShowN i").css("background-position", "13px 9px");
 			$(".passwordN").hide();
 			$(".password1N").val($(".passwordN").val());
 			$(".password1N").show();
 			$(".pwdBtnShowN").attr("isshow", "true");
 		} else {
-			$(".pwdBtnShowN i").css("background-position", "-30px -93px");
+			$(".pwdBtnShowN i").css("background-position", "13px 9px");
 			$(".password1N").hide();
 			$(".passwordN").val($(".password1N").val());
 			$(".passwordN").show();
